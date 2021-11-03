@@ -37,9 +37,9 @@ public class Common {
 		return "common/reset";
 	}
 	
-	@RequestMapping("forgetpassword")
+	@RequestMapping("forgotpass")
 	public String forgetpassword() {
-		return "common/forgetpassword";
+		return "common/forgotpass";
 	}
 	
 }
