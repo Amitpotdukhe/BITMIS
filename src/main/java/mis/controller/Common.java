@@ -17,4 +17,19 @@ public class Common {
 		return "common/test";
 	}
 	
+	@RequestMapping("login")
+	public String login() {
+		return "common/login";
+	}
+	
+	@RequestMapping("adduser")
+	public String adduser() {
+		return "admin/editUser";
+	}
+	
+	@RequestMapping("edituser")
+	public String edituser() {
+		return "admin/editUser";
+	}
+	
 }
