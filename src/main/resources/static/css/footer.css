@@ -1,0 +1,52 @@
+
+
+.footer{
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    height: 60px;
+
+    font-family: Poppins;
+    font-style: normal;
+
+    font-size: 16px;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+
+}
+
+.footer > *{
+
+    margin-right: 20px;
+
+}
+
+.footer > span {
+
+
+    font-weight: 600;
+
+
+}
+
+.footer-item {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.footer-item > img {
+
+    margin-right: 10px;
+
+}

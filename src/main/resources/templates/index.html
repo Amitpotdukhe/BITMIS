@@ -9,7 +9,7 @@
 <body>
 
 
-<section th:fragment="nav" class="header fluid-container">
+<section th:fragment="nav" class="header">
 
     
 <!-- LOGO SECTION  -->
@@ -17,12 +17,16 @@
     <div class="logo-section ">
 
         <div class="clg-logo ">
-            <img id="clg-logo-png" src="../static/Assets/clg-logo.png" alt="">
+
+            <img id="clg-logo-png" class="mr-3" src="../static/Assets/clg-logo.png" alt="">
             <img src="../static/Assets/logo-name.svg" alt="">
+
         </div>
 
         <div class="bitmis-logo">
-            <span>BITMIS</span>
+
+            <span class="bitmis-logo "> BITMIS </span>
+
         </div>
 
     </div>
@@ -31,16 +35,16 @@
 
                                 <!-- PROFILE-STRIP -->
 
-<div class="profile-strip">
+<div class="profile-strip  gradient-strip">
 
 
         <!-- SERACH_BAR -->
 
         
-        <div class="search-bar ">
+        <div class="search-bar">
 
-                <input id="serach-bar" type="text" value="" placeholder="Search">
-                <img id="search-icon" src="../static/Assets/search.svg" alt="icon">
+                <input type="text" value="" placeholder="Search...">
+                <img class="icon-white" src="../static/Assets/search.svg" alt="icon">
 
         </div>
 
@@ -55,7 +59,7 @@
         
     <div class="profile-part ">
 
-        <div class="user-info">
+        <div class="user-info ">
 
                 <span id="user-department">
                         Department
@@ -67,11 +71,11 @@
 
         </div>
 
-        <div class="user-image  ">
+        <div class="user-image ">
             <img src="../static/Assets/user.svg" alt="">
         </div>
 
-        <img src="../static/Assets/down-arrow.svg" alt="">
+        <img class="icon" src="../static/Assets/down-arrow.svg" alt="icon">
 
 
     </div>
@@ -88,49 +92,22 @@
 
                                     <!-- HORIZONTAL-NAV -->
                                 
-    <div class="horizontal-nav" th:each=${...}>
+    <div class="horizontal-nav " th:each=${...}>
 
         <div class="nav-item">
 
-            <span th:text=${...} > User Management </span>
+            <a href="#" th:text=${...} > User Management </a>
 
-            <img src="../static/Assets/down-arrow-blue.svg" alt="">
+            <img class="icon" src="../static/Assets/down-arrow-blue.svg" alt="">
 
         </div>
-
-
+     
     </div>
 
                                     <!-- HORIZONTAL-NAV -->
 
 
 </section>
-
-<footer class="fluid-container footer-strip">
-
-    <div class="footer">
-
-        <span>
-            For any Queries or Support   : 
-        </span>
-
-        <div class="footer-item">
-            <img src="../static/Assets/mail.svg" alt="mail">
-            <span> bit@support@bitwardha.ac.in </span>
-        </div>
-
-
-        <div><img src="../static/Assets/phone.svg" alt="phone no.">
-            <span>+91 999999999</span>
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-
 
 
 

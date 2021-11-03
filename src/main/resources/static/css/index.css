@@ -1,0 +1,276 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body{
+
+    display: block;
+    height: 100vh;
+    width: 100%;
+
+}
+
+:root{
+
+    --primary-font:  Urbanist ;
+    --secondary-font :  Poppins ;
+
+    --primary-color : #6BB4FC ;
+    --secondary-color : #C9E4FF ;
+
+    --white : #FBFBFB ;
+    --black : #202020;
+
+    --gradient : linear-gradient(272.98deg, #C9E4FF 16.44%, #3BC1F2 106.39%) ;
+}
+
+.border{
+
+    border: 2px solid black;
+
+}
+
+
+.icon {
+
+    display: inline;
+    height: 24px;
+    width: 24px;
+
+    cursor: pointer;
+}
+
+.icon-white{
+
+    display: inline;
+    height: 24px;
+    width: 24px;
+
+    filter: invert(1);
+    -webkit-filter: invert(1);
+
+    cursor: pointer;
+}
+
+
+.gradient-strip{
+
+    background: var(--gradient);
+
+}
+
+
+        /* Logo Section */
+
+.logo-section {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px;
+
+    height: 60px;
+    width: 100%;
+
+}
+
+.clg-logo > img:nth-child(1){ /* seting up logo and logo-text */
+
+    margin-right: 10px;
+
+}
+
+.bitmis-logo {
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.1rem;
+
+    color: var(--black);
+
+}
+
+             /* Logo Section */
+
+             /* Profile Strip */
+
+
+.profile-strip{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px;
+
+    height: 60px;
+    width: 100%;
+
+
+
+}
+
+        /* search Bar */
+
+.search-bar{
+
+    background: #69d2ff;
+    padding: 5px;
+
+
+    display: block;
+    width:fit-content;
+
+    border-radius: 5px;
+
+    border: 1.5px solid var(--white);
+
+}
+
+.search-bar > input{
+
+    background: none;
+    border: none;
+    outline: none;
+
+    color: var(--white);
+
+    width: 240px;
+
+    font-weight: 500;
+
+
+}
+
+.search-bar > input::placeholder {
+
+    color: var(--white);
+
+}
+
+       /* search Bar */
+
+       /* profile part */
+
+.profile-part {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profile-part > * {
+
+    margin-right: 10px;
+    overflow: visible;
+
+}
+
+.user-info {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+
+}
+
+#user-department{
+
+    
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    
+    color: #025E7F;
+
+}
+
+#user-role {
+
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+
+    text-transform: capitalize ;
+    
+    color: #068DBF;
+
+}
+
+
+.user-image{
+
+    border: 2px solid black !important;
+    border-radius: 100%;
+
+    transform: scale(1.2);
+
+    overflow: hidden;
+
+}
+
+       /* profile part */
+
+              /* Profile Strip */
+
+
+            /* Horizontal Nav */
+
+.horizontal-nav {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border: 1px solid #6BB4FC;
+    box-shadow: -1px 7px 8px rgba(107, 180, 252, 0.2);
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+
+.nav-item{
+
+    display: inline-block;
+
+    width: 200px;
+
+    padding: 5px;
+
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+
+    text-transform: capitalize;
+
+    margin-right: 10px;
+
+}
+
+.nav-item > a {
+    
+    text-decoration: none;
+    color: var(--primary-color);
+
+}
+
