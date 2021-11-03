@@ -16,9 +16,5 @@ public class AdminHome {
 		return "AdminHome";
 	}
 	
-	@RequestMapping("/admin/add")
-	public String AddUser() {
-		adminService.addUser();
-		return "addUser";
-	}
+	
 }

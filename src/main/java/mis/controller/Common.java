@@ -24,12 +24,22 @@ public class Common {
 	
 	@RequestMapping("adduser")
 	public String adduser() {
-		return "admin/editUser";
+		return "admin/adduser";
 	}
 	
 	@RequestMapping("edituser")
 	public String edituser() {
 		return "admin/editUser";
+	}
+	
+	@RequestMapping("reset")
+	public String reset() {
+		return "common/reset";
+	}
+	
+	@RequestMapping("forgetpassword")
+	public String forgetpassword() {
+		return "common/forgetpassword";
 	}
 	
 }
