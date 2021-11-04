@@ -17,4 +17,29 @@ public class Common {
 		return "common/test";
 	}
 	
+	@RequestMapping("login")
+	public String login() {
+		return "common/login";
+	}
+	
+	@RequestMapping("adduser")
+	public String adduser() {
+		return "admin/adduser";
+	}
+	
+	@RequestMapping("edituser")
+	public String edituser() {
+		return "admin/editUser";
+	}
+	
+	@RequestMapping("reset")
+	public String reset() {
+		return "common/reset";
+	}
+	
+	@RequestMapping("forgotpass")
+	public String forgetpassword() {
+		return "common/forgotpass";
+	}
+	
 }

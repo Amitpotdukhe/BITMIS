@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css}">
+
+<!-- Favicons -->
+  <link rel="apple-touch-icon" th:href="@{/docs/5.1/assets/img/favicons/apple-touch-icon.png}" sizes="180x180">
+  <link rel="icon" th:href="@{/docs/5.1/assets/img/favicons/favicon-32x32.png}" sizes="32x32" type="image/png">
+  <link rel="icon" th:href="@{/docs/5.1/assets/img/favicons/favicon-16x16.png}" sizes="16x16" type="image/png">
+  <link rel="manifest" th:href="@{/docs/5.1/assets/img/favicons/manifest.json}">
+  <link rel="mask-icon" th:href="@{/docs/5.1/assets/img/favicons/safari-pinned-tab.svg}" color="#7952b3">
+  <link rel="icon" th:href="@{/docs/5.1/assets/img/favicons/favicon.ico}">
+  <meta name="theme-color" content="#7952b3">
+
+ <!-- link css -->
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css}">
+
+<!-- Google fonts -->
+<link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap}" rel="stylesheet">
+<link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+<link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+
+<!-- style  -->
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    button > a:hover{
+        color: white;
+    }
+
+  </style>
+</head>
+<body>
+<main class="form">
+    <form>
+
+      <div class="container jumbotron text-center">
+        <img th:src="@{/images/logo.png}" alt="BITW Logo" class="mb-3" style="width: 30%; height: auto;" /><br>
+        <h3 class="mb-4"><strong>LOGIN</strong></h3>
+      </div>
+
+      <div class="font">
+        <input type="email" class="form-control fw-bold" id="floatingInput" placeholder="Email Address"><br>
+        <input type="password" class="form-control fw-bold" id="floatingPassword" placeholder="Password">
+      </div>
+      
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember Me</label>
+      </div>
+      
+      <button class="font w-100 btn btn-sm btn-outline-primary fw-bold" type="submit">Login</button><br>
+      <a th:href="@{/forgotpass}" class="small font fw-bold" style="text-decoration: none;">Forgot Password?</a>
+    
+    </form>
+  </main>
+</body>
+</html>
