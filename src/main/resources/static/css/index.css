@@ -1,7 +1,6 @@
 *{
     padding: 0%;
     margin: 0%;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -345,7 +344,7 @@ align-items: center;
 
 
 .search-bar > input{
-    width: 140px;
+    width: 180px;
     font-size: 13px;
 }
 
@@ -390,5 +389,6 @@ font-size: 0.7rem;
 
 }
 
+         /*Horizontal nav*/
 
 }
