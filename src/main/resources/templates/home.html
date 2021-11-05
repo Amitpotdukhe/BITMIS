@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="layouts/default">
 <head th:insert="header.html :: headerfiles">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -7,5 +8,6 @@
 <body>
 	<header th:insert="header.html :: nav"></header>
 	<h1>This is home page</h1>
+	<div th:insert="footer.html :: footer"></div>
 </body>
 </html>

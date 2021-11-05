@@ -11,7 +11,10 @@ body{
     width: 100%;
 
 }
-
+.adduser-form{
+	margin-top: 50px;
+	padding-bottom: 50px
+}
 :root{
 
     --primary-font:  Urbanist ;
