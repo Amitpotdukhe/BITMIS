@@ -31,6 +31,10 @@
         font-size: 3.5rem;
       }
     }
+    
+    button > a{
+	text-decoration: none;
+}
 
     button > a:hover{
         color: white;
@@ -52,7 +56,7 @@
             <button class="w-100 btn btn-sm btn-outline-primary fw-bold" type="submit">Get OTP</button><br>
             <small class="text-primary fw-bold">Resend OTP</small><br><br>
             <input type="text" class="form-control fw-bold" id="floating-otp" placeholder="Enter OTP"><br>
-            <button class="w-100 btn btn-sm btn-outline-primary fw-bold" type="submit"><a th:href="@{resetpass.html}">Verify</a></button>
+            <button class="w-100 btn btn-sm btn-outline-primary fw-bold" type="submit"><a th:href="@{resetpass}">Verify</a></button>
           </div>
           
         </form>

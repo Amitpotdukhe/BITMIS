@@ -32,14 +32,19 @@ public class Common {
 		return "admin/editUser";
 	}
 	
-	@RequestMapping("reset")
+	@RequestMapping("resetpass")
 	public String reset() {
-		return "common/reset";
+		return "common/resetpass";
 	}
 	
 	@RequestMapping("forgotpass")
 	public String forgetpassword() {
 		return "common/forgotpass";
+	}
+	
+	@RequestMapping("adminHome")
+	public String adminHome() {
+		return "admin/adminHome";
 	}
 	
 }
