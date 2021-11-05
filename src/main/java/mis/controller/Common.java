@@ -51,5 +51,10 @@ public class Common {
 	public String manageRole() {
 		return "admin/managerole";
 	}
+	
+	@RequestMapping("manageuser")
+	public String manageUser() {
+		return "admin/manageuser";
+	}
 
 }
