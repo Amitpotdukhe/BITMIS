@@ -46,6 +46,10 @@ public class Common {
 	public String adminHome() {
 		return "admin/adminHome";
 	}
-
 	
+	@RequestMapping("managerole")
+	public String manageRole() {
+		return "admin/managerole";
+	}
+
 }

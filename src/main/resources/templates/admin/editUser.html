@@ -1,10 +1,199 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+	>
+<head th:insert="header.html :: headerfiles">
+<meta charset="UTF-8" />
+<title>add user</title>
+<link rel="stylesheet" th:href="@{/css/index.css}">
+
+<!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- ============   Style  ============= -->
+    <style>
+      #form{
+        margin: 0.5% 7%; 
+        padding: 5%; 
+        background-color: #f2f2f2; 
+        font-family: 'Open Sans' , sans-serif;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      form {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 190%;
+        letter-spacing: 0.06em;
+        text-transform: capitalize;
+        color: #000000;
+      }
+    </style>
+
 </head>
 <body>
+<header th:insert="header.html :: nav"></header>
+	<div id="form" >
+    <form >
+      
+      <!-- ============   Name + DOB  ============= -->
 
+    <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="firstName">Full Name*</label>
+          <input type="text" class="form-control" id="inputTextl4" placeholder="Name" required>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="DOB">Date Of Birth*</label>
+        <input type="date"class="form-control" id="inputTextl4" placeholder="DOB" required>
+      </div>
+    </div>
+
+        <!-- ============   Email + Password + Gender + UserID  ============= -->
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email*</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password*</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="inputGender4">Gender*</label>
+            <select name="gener" class="form-control" required>
+              <option value="gener">...</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="UserID">UserID*</label>
+            <input type="text" class="form-control" id="inputTextl4" placeholder="UserID" required>
+          </div>
+    
+        </div>
+
+        <!-- ============   UserType + Address ============= -->
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="UserType">UserType*</label>
+            <select name="designation" class="form-control" required>
+              <option value="Type">Select Type</option>
+              <option value="Student">Student</option>
+              <option value="Faculty">Faculty</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="inputAddress">Address*</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Address here ..." required>
+         </div>
+        </div>
+
+         <!-- ============   Mobile + Adhar + Pan  ============= -->
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputNum">Mobile number*</label>
+            <input type="tel" class="form-control" id="inputNum" placeholder="Mobile number" required>
+        
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputAdhar">Aadhar-Card Number*</label>
+            <input type="text" class="form-control" id="inputAdhar" placeholder="Aadhar Number" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPan">Pan Number*</label>
+            <input type="text" class="form-control" id="inputPan" placeholder="Pan Number" required>
+          </div>
+        </div>
+
+          <!-- ============   DepartmentID + DOJ + Designation  ============= -->
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>Department ID*</label>
+            <input type="text" class="form-control" id="inputNum" placeholder="Department ID" required>
+        
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputAdhar">Date Of Joining*</label>
+            <input type="date" class="form-control" id="DOJ" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPan">Designation*</label>
+            <select name="designation" class="form-control" required>
+              <option value="Student">Student</option>
+              <option value="Staff">Staff</option>
+              <option value="HOD">H.O.D.</option>
+              <option value="Principal">Principal</option>
+            </select>
+          </div>
+        </div>
+
+       
+         <!-- ============   Nationality + Religion + blood-group  ============= -->
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Nationality*</label>
+            <input type="text" class="form-control"  placeholder="Nationality" required>
+           </div>
+
+          <div class="form-group col-md-6">
+            <label for="">Religion*</label>
+            <input type="text" class="form-control" placeholder="Religion" required>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCategory">Category*</label>
+           <select name="Category" class="form-control" required>
+            <option value="GENERAL">Select Category</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="NT">NT</option>
+            <option value="OBC">OBC</option>
+            <option value="SBC">SBC</option>
+            <option value="OPEN">OPEN</option>
+          </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="">Caste*</label>
+            <input type="text" class="form-control" placeholder="Caste" required>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="blood-group">blood-group*</label>
+           <select name="blood-group" class="form-control" required>
+            <option value="blood-group">blood-group</option>
+            <option>A Positive</option>
+            <option>A Negative</option>
+            <option>B Positive</option>
+            <option>B Negative</option>
+            <option>AB Positive</option>
+            <option>AB Negative</option>
+            <option>O Positive</option>
+            <option>O Negative</option>
+          </select>
+          </div>
+      </div>
+        
+          <!-- ============   ADD BUTTON  ============= -->
+
+        <button type="submit" class="btn btn-outline-primary">Update</button>
+
+      </form>
+    </div>
+    <div th:insert="footer.html :: footer"></div>
 </body>
 </html>

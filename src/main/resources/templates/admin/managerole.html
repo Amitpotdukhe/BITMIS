@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+
 <html lang:"en" xmlns:th="http://www.thymeleaf.org>
-<head>
+<head th:insert="header.html :: headerfiles">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,6 +87,10 @@ form {
 </style>
 </head>
 <body>
+
+<header th:insert="header.html :: nav"></header>
+
+
    <!---Search bar-->
    <div class="boxContainer mt-5">
        <table class="elementsContainer">
@@ -156,5 +161,9 @@ form {
 
         <!--Submit Button-->
         <button type="submit" class="btn btn-outline-primary">Submit</button>
+        
+<div th:insert="footer.html :: footer"></div>
+        
+        
 </body>
 </html>
