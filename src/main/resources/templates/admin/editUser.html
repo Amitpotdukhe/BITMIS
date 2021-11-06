@@ -1,16 +1,18 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" 
-	>
-<head th:insert="header.html :: headerfiles">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
 <meta charset="UTF-8" />
-<title>add user</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit User</title>
 <link rel="stylesheet" th:href="@{/css/index.css}">
 
 <!-- Latest compiled and minified CSS -->
- <link rel="stylesheet" href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css}" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
 
-<!-- ============   Style  ============= -->
-    <style>
+<style>
       #form{
         margin: 0.5% 7%; 
         padding: 5%; 
@@ -32,23 +34,23 @@
       }
     </style>
 
-</head>
+    </head>
 <body>
-<header th:insert="header.html :: nav"></header>
-	<div id="form" >
-    <form >
+    <header th:insert="header.html :: nav"></header>
+<div id="form">
+    <form>
       
       <!-- ============   Name + DOB  ============= -->
 
     <div class="form-row">
       <div class="form-group col-md-6">
           <label for="firstName">Full Name*</label>
-          <input type="text" class="form-control" id="inputTextl4" placeholder="Name" required>
+          <input type="text" class="form-control" id="inputTextl4" required>
       </div>
 
       <div class="form-group col-md-6">
         <label for="DOB">Date Of Birth*</label>
-        <input type="date"class="form-control" id="inputTextl4" placeholder="DOB" required>
+        <input type="date"class="form-control" id="inputTextl4" placeholder="dd/mm/yyyy" required>
       </div>
     </div>
 
@@ -57,12 +59,12 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email*</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+            <input type="email" class="form-control" id="inputEmail4" required>
           </div>
 
           <div class="form-group col-md-6">
             <label for="inputPassword4">Password*</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
+            <input type="password" class="form-control" id="inputPassword4" required>
           </div>
 
           <div class="form-group col-md-6">
@@ -77,7 +79,7 @@
 
           <div class="form-group col-md-6">
             <label for="UserID">UserID*</label>
-            <input type="text" class="form-control" id="inputTextl4" placeholder="UserID" required>
+            <input type="text" class="form-control" id="inputTextl4" required>
           </div>
     
         </div>
@@ -105,16 +107,16 @@
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="inputNum">Mobile number*</label>
-            <input type="tel" class="form-control" id="inputNum" placeholder="Mobile number" required>
+            <input type="tel" class="form-control" id="inputNum" required>
         
           </div>
           <div class="form-group col-md-4">
             <label for="inputAdhar">Aadhar-Card Number*</label>
-            <input type="text" class="form-control" id="inputAdhar" placeholder="Aadhar Number" required>
+            <input type="text" class="form-control" id="inputAdhar" required>
           </div>
           <div class="form-group col-md-4">
             <label for="inputPan">Pan Number*</label>
-            <input type="text" class="form-control" id="inputPan" placeholder="Pan Number" required>
+            <input type="text" class="form-control" id="inputPan" required>
           </div>
         </div>
 
@@ -123,7 +125,7 @@
         <div class="form-row">
           <div class="form-group col-md-4">
             <label>Department ID*</label>
-            <input type="text" class="form-control" id="inputNum" placeholder="Department ID" required>
+            <input type="text" class="form-control" id="inputNum" required>
         
           </div>
           <div class="form-group col-md-4">
@@ -146,12 +148,12 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Nationality*</label>
-            <input type="text" class="form-control"  placeholder="Nationality" required>
+            <input type="text" class="form-control" required>
            </div>
 
           <div class="form-group col-md-6">
             <label for="">Religion*</label>
-            <input type="text" class="form-control" placeholder="Religion" required>
+            <input type="text" class="form-control" required>
             </div>
 
             <div class="form-group col-md-6">
@@ -169,7 +171,7 @@
 
           <div class="form-group col-md-6">
             <label for="">Caste*</label>
-            <input type="text" class="form-control" placeholder="Caste" required>
+            <input type="text" class="form-control" required>
             </div>
 
             <div class="form-group col-md-4">
@@ -190,7 +192,7 @@
         
           <!-- ============   ADD BUTTON  ============= -->
 
-        <button type="submit" class="btn btn-outline-primary">Update</button>
+        <button type="submit" class="btn btn-outline-primary float-right">Update</button>
 
       </form>
     </div>
