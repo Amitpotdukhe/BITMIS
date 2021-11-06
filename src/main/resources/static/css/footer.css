@@ -1,16 +1,11 @@
 
 footer{
-
     position: absolute;
     bottom: 0%;
     width: 100%;
-
 }
 
-
-
 .footer{
-
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -21,7 +16,6 @@ footer{
 
     font-family: Poppins;
     font-style: normal;
-
 
     text-transform: capitalize;
 
