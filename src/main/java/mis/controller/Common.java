@@ -17,15 +17,12 @@ public class Common {
 		return "common/test";
 	}
 	
-	@RequestMapping("login")
+	@RequestMapping("signin")
 	public String login() {
 		return "common/login";
 	}
 	
-	@RequestMapping("adduser")
-	public String adduser() {
-		return "admin/adduser";
-	}
+	
 	
 	@RequestMapping("edituser")
 	public String edituser() {
@@ -47,14 +44,6 @@ public class Common {
 		return "admin/adminHome";
 	}
 	
-	@RequestMapping("managerole")
-	public String manageRole() {
-		return "admin/managerole";
-	}
 	
-	@RequestMapping("manageuser")
-	public String manageUser() {
-		return "admin/manageuser";
-	}
 
 }
