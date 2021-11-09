@@ -80,10 +80,6 @@
             text-transform: capitalize;
             color: #000000;
         }
-        button > a, a {
-        text-decoration: none;
-    	}
-
     	button > a:hover{
         	color: white;
     	}
@@ -134,8 +130,8 @@
                             <td>123456789</td>
                             <td>xxx</td>
                             <td>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Delete User</button>
-                                <button type="button" class="btn btn-sm btn-outline-primary"<a th:href="@{edituser}">Edit User</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-success"<a th:href="@{edituser}"><i class="fas fa-pencil-alt" style="color: #42ba96;"></i></a></button>
                             </td>
                         </tr>
                         <tr>
@@ -146,8 +142,8 @@
                             <td>945739575</td>
                             <td>xxx</td>
                             <td>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Delete User</button>
-                                <button type="button" class="btn btn-sm btn-outline-primary"><a th:href="@{edituser}">Edit User</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-success"><a th:href="@{edituser}"><i class="fas fa-pencil-alt" style="color: #42ba96;"></i></a></button>
                             </td>
                         </tr>
                     </tbody>
