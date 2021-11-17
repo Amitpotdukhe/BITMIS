@@ -9,20 +9,19 @@ import mis.dao.UserRepository;
 
 public class UserDetailsServiceImpl implements UserDetailsService {
 	
-	@Autowired
-	private UserRepository userRepo;
-	
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepo.getUserByUserName(username);
-
-		if (user == null) {
-			throw new UsernameNotFoundException("Could not found user !!");
-		}
-
-		CustomUserDetails customUserDetails = new CustomUserDetails(user);
-
-		return customUserDetails;
-	}
+	 	@Autowired
+	    private UserRepository userRepository;
+	     
+	    @Override
+	    public UserDetails loadUserByUsername(String username)
+	            throws UsernameNotFoundException {
+	        User user = userRepository.getUserByUsername(username);
+	      
+	        if (user == null) {
+	            throw new UsernameNotFoundException("Could not find user");
+	        }
+	         
+	        return new CustomUserDetails(user);
+	    }
 
 }

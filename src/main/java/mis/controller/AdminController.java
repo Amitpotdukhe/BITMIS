@@ -22,9 +22,8 @@ public class AdminController {
 	private AdminService adminService;
 	
 	@RequestMapping("adduser")
-	public String adduser(Model model) {
-		model.addAttribute("title", "Add New User");
-		model.addAttribute("user", new User());
+	public String adduser() {
+		
 		return "admin/adduser";
 	}
 	
