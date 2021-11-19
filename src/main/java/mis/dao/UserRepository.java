@@ -9,6 +9,6 @@ import mis.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-	@Query("SELECT u FROM User u WHERE u.username = :username")
-    public User getUserByUsername(@Param("username") String username);
+	@Query("select u from User u where u.email = :email")
+	public User getUserByUserName(@Param("email") String email);
 }

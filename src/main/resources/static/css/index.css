@@ -131,16 +131,14 @@ align-items: center;
 .search-bar{
 
     background: #69d2ff;
-    padding: 5px;
-
+    padding: 4px;
+	height: 40px;
 
     display: block;
     width:fit-content;
-
-    border-radius: 5px;
-
+	
+    border-radius: 4px;
     border: 1.5px solid var(--white);
-
 }
 
 .search-bar > input{
@@ -394,4 +392,11 @@ font-size: 0.7rem;
 
          /*Horizontal nav*/
 
+}
+.strip{
+	background-color:#CFD8DC
+}
+.color-strip{
+	background-color:#3949AB;
+	min-height:10px
 }
