@@ -1,27 +1,31 @@
 package mis.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="USERS")
+@Table(name = "user")
 public class User {
-	
+ 
 	@Id
-	private int user_id;
-	private String user_type;
-	private String user_name;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@Size(min = 2,max = 20,message = "min 2 and max 20 characters are allowed !!")
+	private String name;
+	@Column(unique = true)
+	private String email;
 	private String password;
+	private String role;
+	private boolean enabled;
+	private String imageUrl;
 	private String dob;
 	private String gender;
 	private String address;
-	private String email_id;
-	private String aadhar_card_no;
-	private String pan_card_no;
-	private String mobile_no;
-	private String department_id;
+	private String mobileNumber;
+	private String aadharNumber;
+	private String panNumber;
+	private String deptId;
 	private String doj;
 	
 	public User() {
@@ -29,30 +33,29 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getUser_id() {
-		return user_id;
+	public int getId() {
+		return id;
 	}
 
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getUser_type() {
-		return user_type;
+	public String getName() {
+		return name;
 	}
 
-	public void setUser_type(String user_type) {
-		this.user_type = user_type;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	
 
 	public String getPassword() {
 		return password;
@@ -60,6 +63,30 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
 	public String getDob() {
@@ -86,44 +113,36 @@ public class User {
 		this.address = address;
 	}
 
-	public String getEmail_id() {
-		return email_id;
+	public String getMobileNumber() {
+		return mobileNumber;
 	}
 
-	public void setEmail_id(String email_id) {
-		this.email_id = email_id;
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
 	}
 
-	public String getAadhar_card_no() {
-		return aadhar_card_no;
+	public String getAadharNumber() {
+		return aadharNumber;
 	}
 
-	public void setAadhar_card_no(String aadhar_card_no) {
-		this.aadhar_card_no = aadhar_card_no;
+	public void setAadharNumber(String aadharNumber) {
+		this.aadharNumber = aadharNumber;
 	}
 
-	public String getPan_card_no() {
-		return pan_card_no;
+	public String getPanNumber() {
+		return panNumber;
 	}
 
-	public void setPan_card_no(String pan_card_no) {
-		this.pan_card_no = pan_card_no;
+	public void setPanNumber(String panNumber) {
+		this.panNumber = panNumber;
 	}
 
-	public String getMobile_no() {
-		return mobile_no;
+	public String getDeptId() {
+		return deptId;
 	}
 
-	public void setMobile_no(String mobile_no) {
-		this.mobile_no = mobile_no;
-	}
-
-	public String getDepartment_id() {
-		return department_id;
-	}
-
-	public void setDepartment_id(String department_id) {
-		this.department_id = department_id;
+	public void setDeptId(String deptId) {
+		this.deptId = deptId;
 	}
 
 	public String getDoj() {
@@ -136,12 +155,12 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [user_id=" + user_id + ", user_type=" + user_type + ", user_name=" + user_name + ", password="
-				+ password + ", dob=" + dob + ", gender=" + gender + ", address=" + address + ", email_id=" + email_id
-				+ ", aadhar_card_no=" + aadhar_card_no + ", pan_card_no=" + pan_card_no + ", mobile_no=" + mobile_no
-				+ ", department_id=" + department_id + ", doj=" + doj + "]";
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", role=" + role
+				+ ", enabled=" + enabled + ", imageUrl=" + imageUrl + ", dob=" + dob + ", gender=" + gender
+				+ ", address=" + address + ", mobileNumber=" + mobileNumber + ", aadharNumber=" + aadharNumber
+				+ ", panNumber=" + panNumber + ", deptId=" + deptId + ", doj=" + doj + "]";
 	}
 
-	
-	
+
+    
 }

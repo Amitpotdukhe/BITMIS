@@ -10,11 +10,14 @@ import mis.dao.UserRepository;
 public class UserDetailsServiceImpl implements UserDetailsService {
 	
 	@Autowired
-	private UserRepository userRepo;
-	
+	private UserRepository userRepository;
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepo.getUserByUserName(username);
+
+		// fetching user from database
+
+		User user = userRepository.getUserByUserName(username);
 
 		if (user == null) {
 			throw new UsernameNotFoundException("Could not found user !!");
