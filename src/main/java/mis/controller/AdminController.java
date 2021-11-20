@@ -43,7 +43,6 @@ public class AdminController {
 		System.out.println(user);
 		adminService.addUser(user);
 		return "redirect:/admin/adduser";
-
 	}
 	
 	@RequestMapping("view-users")

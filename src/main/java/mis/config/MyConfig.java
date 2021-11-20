@@ -45,7 +45,7 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/admin/**").hasAuthority("ADMIN").antMatchers("/user/**").hasAuthority("USER")
+		http.authorizeRequests().antMatchers("/user/**").hasAuthority("USER")
 				.antMatchers("/**").permitAll().and().formLogin()
 				.loginPage("/signin")
 				.defaultSuccessUrl("/home")				

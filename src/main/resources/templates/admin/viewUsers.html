@@ -36,6 +36,20 @@
 			</thead>
 			
 			<tbody>
+			<tr>
+					<td>Student ID</td>
+					<td>Student Name</td>
+					<td>Student City</td>
+
+					<td>
+						<div>
+							<a>Edit</a>
+						</div> &nbsp;&nbsp;&nbsp;
+						<div>
+							<a>Delete</a>
+						</div>
+					</td>
+				</tr>
 				<tr th:each="user : ${allUsers}">
 					<td th:text="${user.email}">Student ID</td>
 					<td th:text="${user.name}">Student Name</td>
