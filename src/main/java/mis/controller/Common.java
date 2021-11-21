@@ -43,24 +43,5 @@ public class Common {
 	public String adminHome() {
 		return "admin/adminHome";
 	}
-	
-	
-<<<<<<< HEAD
-	@RequestMapping("manageuser")
-	public String manageUser() {
-		return "admin/manageuser";
-	}
-	
-	@RequestMapping("addleavebalance")
-	public String addLeaveBalance() {
-		return "admin/addleavebalance";
-	}
-	
-	@RequestMapping("leavehistory")
-	public String leaveHistory() {
-		return "admin/leavehistory";
-	}
-=======
->>>>>>> d418537f7f20415ec16fd5ce4936b322190cb127
 
 }
