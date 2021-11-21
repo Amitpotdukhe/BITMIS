@@ -17,15 +17,12 @@ public class Common {
 		return "common/test";
 	}
 	
-	@RequestMapping("login")
+	@RequestMapping("signin")
 	public String login() {
 		return "common/login";
 	}
 	
-	@RequestMapping("adduser")
-	public String adduser() {
-		return "admin/adduser";
-	}
+	
 	
 	@RequestMapping("edituser")
 	public String edituser() {
@@ -47,11 +44,8 @@ public class Common {
 		return "admin/adminHome";
 	}
 	
-	@RequestMapping("managerole")
-	public String manageRole() {
-		return "admin/managerole";
-	}
 	
+<<<<<<< HEAD
 	@RequestMapping("manageuser")
 	public String manageUser() {
 		return "admin/manageuser";
@@ -66,5 +60,7 @@ public class Common {
 	public String leaveHistory() {
 		return "admin/leavehistory";
 	}
+=======
+>>>>>>> d418537f7f20415ec16fd5ce4936b322190cb127
 
 }
