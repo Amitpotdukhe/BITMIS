@@ -56,5 +56,15 @@ public class Common {
 	public String manageUser() {
 		return "admin/manageuser";
 	}
+	
+	@RequestMapping("addleavebalance")
+	public String addLeaveBalance() {
+		return "admin/addleavebalance";
+	}
+	
+	@RequestMapping("leavehistory")
+	public String leaveHistory() {
+		return "admin/leavehistory";
+	}
 
 }
