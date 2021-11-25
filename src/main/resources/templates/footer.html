@@ -5,32 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/index.css}">
-    <link rel="stylesheet" th:href="@{/css/footer.css}">
     <title th:text="${metaTitle} ? ${metaTitle} : 'default title'"></title>
 </head>
 <body>
     
     <footer th:fragment="footer"  class="gradient-strip footer-strip">
 
-        <div class="footer">
-    
-            <span>
-                For any Queries or Support   : 
-            </span>
-    
-            <div class="footer-item">
-                <img th:src="@{/Assets/mail.svg}" alt="mail">
-                <span> bit@support@bitwardha.ac.in </span>
-            </div>
-    
-    
-            <div class="footer-item">
-                <img th:src="@{/Assets/phone.svg}" alt="phone no.">
-                <span>+91 999999999</span>
-            </div>
-    
-        </div>
-    
     </footer>
 
 
