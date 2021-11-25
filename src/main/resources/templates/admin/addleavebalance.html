@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITMIS</title>
+
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css}" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css}">
+
+    <!-- Google fonts -->
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap}" rel="stylesheet">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+
+    <style>
+        button>a {
+            text-decoration: none;
+            color: #42ba96;
+        }
+
+        button>a:hover {
+            color: white;
+        }
+
+        fas:hover {
+            color: white;
+        }
+
+        fas {
+            color: #42ba96;
+        }
+
+    </style>
+    </head>
+
+<body class="font-size-sm">
+<header th:insert="header.html :: nav"></header>
+    <div class="container mt-5">
+        <div class="row">
+            <form>
+                <div class="row justify-content-start">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="leaveType" class="col-form-label">Leave Type </label>
+                            </div>
+                            <div class="col-md-7">
+                                <select id="leaveType" class="form-select">
+                                    <option value="Type">Select </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-form-label">Number of Leaves to be Credited </label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" value="NumberofLeaves" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="justify-content-start">
+                    <div class="form-check form-check-inline col-md-4">
+                        <input type="radio" value="addtoall" class="form-check-input">
+                        <label class="form-check-label"> Add to All</label>
+                    </div>
+                    <div class="form-check form-check-inline col-md-4">
+                        <input type="radio" value="addtostaff" class="form-check-input">
+                        <label class="form-check-label"> Add to Specific Staff</label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="container mt-5 font">
+                <div class="row">
+                    <div class="userDetails"><strong>Results: User Details</strong></div>
+                </div><br>
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped table-hover shadow">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">UserID</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Mobile Number</th>
+                                    <th scope="col">Role</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-2">
+                                                <i class="fas fa-user-circle fa-2x"></i>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>xyz<br><small>Staff</small></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>123</td>
+                                    <td>xyz@gmail.com</td>
+                                    <td>123456789</td>
+                                    <td>xxx</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-danger"><i
+                                                class="fas fa-trash-alt"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-success"><a href="edituser.html"><i
+                                                    class="fas fa-pencil-alt"></i></a></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <i class="fas fa-user-circle fa-2x"></i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>xyz<br><small>Student</small></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>234</td>
+                                    <td>xyz12@gmail.com</td>
+                                    <td>945739575</td>
+                                    <td>xxx</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-danger"><i
+                                                class="fas fa-trash-alt"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-success"><a href="edituser.html"><i
+                                                    class="fas fa-pencil-alt"></i></a></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+<div th:insert="footer.html :: footer"></div>
+</body>
+
+</html>

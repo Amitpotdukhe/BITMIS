@@ -43,7 +43,5 @@ public class Common {
 	public String adminHome() {
 		return "admin/adminHome";
 	}
-	
-	
 
 }

@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/index.css}">
-    
+    <link rel="stylesheet" th:href="@{/css/header.css}">
     <link rel="stylesheet" th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}">
     <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css}">
 
     <title>Manage Role</title>
 
@@ -92,7 +93,7 @@ form {
 
 
    <!---Search bar-->
-   <div class="boxContainer mt-5">
+   <div class="boxContainer mt-3">
        <table class="elementsContainer">
            <tr>
                <td>
@@ -111,45 +112,72 @@ form {
             <div class="col-md-12 userDetails font"><strong>Results: User Details</strong></div>
         </div><br>
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <table class="table table-striped table-hover">
                 <thead>
-                    <tr>
-                        <th scope="col">Sr. No.</th>
-                        <th scope="col">UserID</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Mobile Number</th>
-                        <th scope="col">Role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    	<th scope="row">1</th>
-                        <td>123</td>
-                        <td>xyz@gmail.com</td>
-                        <td>xyz</td>
-                        <td>123456789</td>
-                        <td>xxx</td>
-                    </tr>
-                </tbody>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">UserID</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Mobile Number</th>
+                            <th scope="col">Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="row justify-content-start">
+                                    <div class="col-md-2">
+                                        <i class="fas fa-user-circle fa-2x"></i>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>xyz<br><small>Staff</small></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>123</td>
+                            <td>xyz@gmail.com</td>
+                            <td>123456789</td>
+                            <td>xxx</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
             <!-- Role + Action -->
             <!--Role-->
-            <div class="col-md-2 mx-auto font">
-                <form>
-                    <div class="form-row offset-md-1">
-                        <div class="form-group col-md-10 text-center">
-                          <label for="UserRole">Role</label>
-                          <select name="role" class="form-control">
-                            <option value="Type">Select Role</option>
-                            <option value="Student">HOD</option>
-                            <option value="Student">Student</option>
-                            <option value="Faculty">Faculty</option>
-                          </select>
+            <div class="form">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="Role" class="col-form-label">Role </label>
+                            </div>
+                            <div class="col-md-7">
+                                <select id="Role" class="form-select">
+                                    <option value="Student">Student</option>
+                                    <option value="Faculty" selected>Faculty</option>
+                                    <option value="HOD">HOD</option>
+                                </select>
+                            </div>
                         </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="Action" class="col-form-label">Action </label>
+                            </div>
+                            <div class="col-md-7">
+                                <select id="Action" class="form-select">
+                                    <option value="Assign" selected>Assign</option>
+                                    <option value="Revoke">Revoke</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!--Action-->
                         <div class="form-group col-md-10 text-center">
                             <label for="UserAction">Action</label>
@@ -163,11 +191,15 @@ form {
                        </div>
                       <button type="submit" class="btn btn-outline-primary">Submit</button>  
                 </form>
-                
+
             </div>
         </div><br>
 
-        <!--Submit Button-->       
-<div th:insert="footer.html :: footer"></div>       
+        <!--Submit Button-->
+
+        
+<div th:insert="footer.html :: footer"></div>
+        
+        
 </body>
 </html>
