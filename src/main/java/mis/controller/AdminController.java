@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import mis.entity.User;
 import mis.services.AdminService;
 
-	
-
 @Controller
 @RequestMapping("/admin/")
 public class AdminController {
@@ -31,6 +29,16 @@ public class AdminController {
 	@RequestMapping("managerole")
 	public String manageRole() {
 		return "admin/managerole";
+	}
+	
+	@RequestMapping("edituser")
+	public String editUser() {
+		return "admin/editUser";
+	}
+	
+	@RequestMapping("leavehistory")
+	public String leaveHistory() {
+		return "admin/leavehistory";
 	}
 	
 	@RequestMapping("manageuser")
