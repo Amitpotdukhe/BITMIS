@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:fragment="headerfiles">
     <title th:text="${metaTitle} ? ${metaTitle} : 'default title'"></title>
     <meta charset="UTF-8"/>
@@ -19,15 +19,28 @@
         <!-- site logo -->
         <a href="#home" class="site-logo">
         	<img id="clg-logo-png" class="mr-3" th:src="@{/Assets/clg-logo.png}" alt=""> 
-        	<img id="clg-logo-png" class="mr-3 name-clgg" th:src="@{/Assets/logo-name.svg}" alt=""> 
+        	<img id="clg-logo-png" class="mr-3 name-clgg" th:src="@{/Assets/logo-name.svg}" alt="">  
         </a>
 
         <!-- site menu/nav -->
         <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">service</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a th:href="@{/home}">home</a></li>
+          <li><a sec:authorize="hasAuthority('ADMIN')" th:href="@{/admin/view-users}">Admin</a></li>
+          <li><a href="#">Principal</a></li>
+          <li><a href="#">HOD</a></li>
+          <li><a sec:authorize="!isAuthenticated()" th:href="@{/signin}">Login</a></li>
+          <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a></li>
+          <li sec:authorize="isAuthenticated()">
+          	<div class="dropdown">
+          	  
+			  <a class="dropbtn"><img alt="" class="profile-icon" th:src="@{/Assets/profile.png}">Dropdown</a>
+			  <div class="dropdown-content">
+			    <a class="drop-link" th:href="@{/profile}">Profile</a>
+			    <a class="drop-link" href="#">Link 2</a>
+			    <a class="drop-link" href="#">Logout</a>
+			  </div>
+			</div>
+          </li>
         </ul>
 
         <!-- nav-toggler for mobile version only -->
