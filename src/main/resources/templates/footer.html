@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="headerfiles" >
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/index.css}">
-    <link rel="stylesheet" th:href="@{/css/footer.css}">
-    <title th:text="${metaTitle} ? ${metaTitle} : 'default title'"></title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" th:href="@{/css/index.css}">
+   <link rel="stylesheet" th:href="@{https://use.fontawesome.com/releases/v5.0.8/css/all.css}">
+  <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+  <title th:text="${metaTitle} ? ${metaTitle} : 'default title'"></title>
 </head>
+
 <body>
     
-    <footer th:fragment="footer"  class="gradient-strip footer-strip">
+    <footer th:fragment="footer">
+    	<footer class="site-footer">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; Copyright 2021 Bajaj Institute of Technology. All Rights Reserved
+         
+            </p>
+          </div>
 
-        <div class="footer">
-    
-            <span>
-                For any Queries or Support   : 
-            </span>
-    
-            <div class="footer-item">
-                <img th:src="@{/Assets/mail.svg}" alt="mail">
-                <span> bit@support@bitwardha.ac.in </span>
-            </div>
-    
-    
-            <div class="footer-item">
-                <img th:src="@{/Assets/phone.svg}" alt="phone no.">
-                <span>+91 999999999</span>
-            </div>
-    
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="" href="#"> <img alt="" th:src="@{/Assets/facebook.png}"> </i></a></li>
+              <li><a class="" href="#"><img alt="" th:src="@{/Assets/linkdin.png}"></i></a></li>
+              <li><a class="" href="#"><img alt="" th:src="@{/Assets/twitter.png}"></a></li>   
+            </ul>
+          </div>
         </div>
-    
+      </div>
+</footer>
+<div class="color-strip"></div>
     </footer>
-
-
-
     
 </body>
 </html>
