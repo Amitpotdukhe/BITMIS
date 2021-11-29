@@ -1,21 +1,95 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorator="layouts/default">
-<head th:insert="header.html :: headerfiles">
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="UTF-8"/>
 <link rel="stylesheet" th:href="@{/css/index.css}">
 <link rel="stylesheet" th:href="@{/css/header.css}">
-<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
 	<header th:insert="header.html :: nav"></header>
-	<div class="">
-    	
-			<h1>This is home page</h1>
-		
+	<div class="container">
+    	<span class="navstiplogo">
+    		<div class="label">
+    			<a href="https://bitwardha.ac.in/" class="navbar-brand img-fluid -link" rel="home" aria-current="page"><img width="1181" height="152" src="https://bitwardha.ac.in/wp-content/uploads/2020/08/logo.png" class="navbar-brand img-fluid " alt="Bajaj Institute of Technology Wardha" srcset="https://bitwardha.ac.in/wp-content/uploads/2020/08/logo.png 1181w, https://bitwardha.ac.in/wp-content/uploads/2020/08/logo-300x39.png 300w, https://bitwardha.ac.in/wp-content/uploads/2020/08/logo-1024x132.png 1024w, https://bitwardha.ac.in/wp-content/uploads/2020/08/logo-768x99.png 768w" sizes="(max-width: 1181px) 100vw, 1181px"></a></span>
+			</div>
+		<section class="bit-times py-3 py-lg-5 ">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-justify">
+            <h2> BIT <span>Times</span></h2>
+            <p><img class="main-page-image" src="https://bitwardha.ac.in/wp-content/themes/bajaj-institute/assets/img/topi.svg"></p>
+          </div>
+                              <div class="col-12 col-md-6 col-lg-4 pb-4">
+            <div class="card">
+<!-- 			  <a href="<>php echo get_permalink(); ?>"> -->
+               <img class="main-page-image" src="https://bitwardha.ac.in/wp-content/uploads/2020/08/admin-backk_348x232-e1603180952960.png"  alt="...">
+<!-- 			  </a> -->
+              <div class="card-body">
+<!--                 <a href="<>php echo get_permalink(); ?>"> -->
+					<h5 class="card-title">Inauguration Ceremony</h5>
+<!-- 				  </a> -->
+                <p class="card-text">IT icon Mr. Nandan Nilekani officially inaugurated Institute Campus. Speaking on this occasion Mr. Nilekani iterated that Indian youths stand […]</p>
+                <a href="https://bitwardha.ac.in/inauguration-ceremony-of-bit/" class="btn btn-danger">Read More..</a>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-md-6 col-lg-4 pb-4">
+            <div class="card">
+<!-- 			  <a href="<>php echo get_permalink(); ?>"> -->
+               <img class="main-page-image" src="https://bitwardha.ac.in/wp-content/uploads/2020/08/IMG_4567-min-scaled.jpg" alt="...">
+<!-- 			  </a> -->
+              <div class="card-body">
+<!--                 <a href="<>php echo get_permalink(); ?>"> -->
+					<h5 class="card-title">BIT Students secure 1st place in National Smart India Hackathon Software Edition</h5>
+<!-- 				  </a> -->
+                <p class="card-text">Bajaj Institute of Technology, Wardha made a remarkable achievement as 7 of its Teams consisting of around 40 students were […]</p>
+                <a href="https://bitwardha.ac.in/sih-2020-winner/" class="btn btn-danger">Read More..</a>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-md-6 col-lg-4 pb-4">
+            <div class="card">
+<!-- 			  <a href="<>php echo get_permalink(); ?>"> -->
+               <img class="main-page-image" src="https://bitwardha.ac.in/wp-content/uploads/2020/08/mech3.png" alt="...">
+<!-- 			  </a> -->
+              <div class="card-body">
+<!--                 <a href="<>php echo get_permalink(); ?>"> -->
+					<h5 class="card-title">Expert Lectures from Engineers of Bajaj Auto Ltd., Pune</h5>
+<!-- 				  </a> -->
+                <p class="card-text">To introduce students to real-world life experiences about designing, manufacturing and production, expert lectures from experienced engineers of Bajaj Auto […]</p>
+                <a href="https://bitwardha.ac.in/experts-from-bajaj-auto-ltd-pune/" class="btn btn-danger">Read More..</a>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-md-6 col-lg-4 pb-4">
+            <div class="card">
+<!-- 			  <a href="<>php echo get_permalink(); ?>"> -->
+               <img class="main-page-image" src="https://bitwardha.ac.in/wp-content/uploads/2020/09/Hackathon-Winner-scaled.jpg" >
+<!-- 			  </a> -->
+              <div class="card-body">
+<!--                 <a href="<>php echo get_permalink(); ?>"> -->
+					<h5 class="card-title">BIT Students secure 1st place in National Smart India Hackathon Hardware Edition</h5>
+<!-- 				  </a> -->
+                <p class="card-text">National Smart India Hackathon (SIH) competition’s hardware projects final results were declared on 24th February’21. The team of 6 students […]</p>
+                <a href="https://bitwardha.ac.in/bit-students-secured-1st-place-in-national-smart-india-hackathon-hardware-edition/" class="btn btn-danger">Read More..</a>
+              </div>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </section>
 	</div>
 	
+	
+	<!-- photo gallery -->	
+	
+	<!-- photo gallery -->
+	
+	
+	
+		
 	<div th:insert="footer.html :: footer"></div>
 </body>
 </html>
