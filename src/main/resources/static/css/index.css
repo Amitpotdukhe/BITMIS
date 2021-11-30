@@ -28,18 +28,7 @@
 .main-area{
 	z-index:-1
 }
-body{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    height: 100vh;
-    width: 100%;
-    overflow: auto;
-
-}
 .adduser-form{
 	margin-top: 50px;
 	padding-bottom: 50px
@@ -105,8 +94,15 @@ position: absolute;
 
 #footer{
 
-  /* bottom: 0%; */
-  /* position: absolute; */
+  bottom: 0%;
+  position: absolute;
+  width: 100%;
+
+}
+
+#scroll-footer{
+
+
   width: 100%;
 
 }
@@ -694,6 +690,6 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
 
 .editUser-container{
 
-  margin-top: 45%;
+  margin: 6% 0px;
 
 }
