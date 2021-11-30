@@ -28,18 +28,7 @@
 .main-area{
 	z-index:-1
 }
-body{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    height: 100vh;
-    width: 100%;
-    overflow: auto;
-
-}
 .adduser-form{
 	margin-top: 50px;
 	padding-bottom: 50px
