@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BITMIS</title>
+    <link rel="stylesheet" th:href="@{/css/table.css}">
 	<link rel="stylesheet" th:href="@{/css/header.css}">
     <link rel="stylesheet" th:href="@{/css/index.css}">
 	<link rel="stylesheet" th:href="@{/css/style.css}">
@@ -15,14 +16,14 @@
     <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css}">
 
     <!-- Google fonts -->
-    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap}" rel="stylesheet">
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap}" rel="stylesheet">
     <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
     <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
 
     <style>
         button>a {
             text-decoration: none;
-            color: #42ba96;
+            color: #ac2727;
         }
 
         button>a:hover {
@@ -37,13 +38,18 @@
             color: #42ba96;
         }
 
+        .center{
+            display: flex;
+            align-items: center;
+        }
+
     </style>
     </head>
 
 <body class="font-size-sm">
 <header th:insert="header.html :: nav"></header> 
 
-<div class="container mt-5">
+<div class="container">
       <div class="row">
           <form>
               <div class="row justify-content-start">
@@ -54,7 +60,14 @@
                           </div>
                           <div class="col-md-7">
                               <select id="leaveType" class="form-select">
-                                  <option value="Type">Select </option>
+                                  <option value="Type">Casual Leave </option>
+                                  <option value="Type">Maternity Leave with Pay </option>
+                                  <option value="Type">Maternity Leave without Pay </option>
+                                  <option value="Type">Duty Leave </option>
+                                  <option value="Type">Earned Leave  </option>
+                                  <option value="Type">L.W.P </option>
+                                  <option value="Type">Compensatory Leave </option>
+                                  <option value="Type">Half Pay/Commuted Leave </option>
                               </select>
                           </div>
                       </div>
@@ -76,11 +89,11 @@
 
               <div class="justify-content-start">
                   <div class="form-check form-check-inline col-md-4">
-                      <input type="radio" value="addtoall" class="form-check-input">
+                      <input type="radio" value="addtoall" name="radio" class="form-check-input">
                       <label class="form-check-label"> Add to All</label>
                   </div>
                   <div class="form-check form-check-inline col-md-4">
-                      <input type="radio" value="addtostaff" class="form-check-input">
+                      <input type="radio" value="addtostaff" name="radio" class="form-check-input">
                       <label class="form-check-label"> Add to Specific Staff</label>
                   </div>
               </div>
@@ -95,63 +108,63 @@
                       <table class="table table-sm table-striped table-hover shadow">
                           <thead>
                               <tr>
-                                  <th scope="col">Name</th>
-                                  <th scope="col">UserID</th>
-                                  <th scope="col">Email</th>
-                                  <th scope="col">Mobile Number</th>
-                                  <th scope="col">Role</th>
-                                  <th scope="col">Action</th>
+                                  <th scope="col name">Name</th>
+                                  <th scope="col user-id">UserID</th>
+                                  <th scope="col mob-no">Mobile Number</th>
+                                  <th scope="col department">Department</th>
+                                  <th scope="col designation">Designation</th>
+                                  <th scope="col action">Action</th>
                               </tr>
                           </thead>
                           <tbody>
                               <tr>
-                                  <td>
-                                      <div class="row justify-content-start">
-                                          <div class="col-md-2">
-                                              <i class="fas fa-user-circle fa-2x"></i>
+                                  <td >
+                                      <div class="row name justify-content-start">
+                                          <div class="col-md-2 center" style="margin-left: 20px;">
+                                              <img id="user-image" th:src="@{/Assets/profile.svg}" alt="">
                                           </div>
-                                          <div class="col-md-3">
-                                              <p>xyz<br><small>Staff</small></p>
+                                          <div class="col center" >
+                                              <p style="margin: 0px;" >First Name Last Name<br><small>Staff</small></p>
                                           </div>
                                       </div>
                                   </td>
-                                  <td>123</td>
-                                  <td>xyz@gmail.com</td>
-                                  <td>123456789</td>
-                                  <td>xxx</td>
+                                  <td>12345</td>
+                                  <td>99999999999</td>
+                                  <td>Computer</td>
+                                  <td>Faculty</td>
                                   <td>
-                                      <button type="button" class="btn btn-sm btn-outline-danger"><i
-                                              class="fas fa-trash-alt"></i></button>
-                                      <button type="button" class="btn btn-sm btn-outline-success"><a href="edituser.html"><i
-                                                  class="fas fa-pencil-alt"></i></a></button>
+                                      <button type="button" class="btn btn-sm btn-outline-success"><i
+                                        class="fas fa-pencil-alt"></i></a></button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger"><a href="edituser.html"><i
+                                            class="fas fa-trash-alt"></i></button>
                                   </td>
                               </tr>
                               <tr>
-                                  <td>
-                                      <div class="row">
-                                          <div class="col-md-2">
-                                              <i class="fas fa-user-circle fa-2x"></i>
-                                          </div>
-                                          <div class="col-md-2">
-                                              <p>xyz<br><small>Student</small></p>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  <td>234</td>
-                                  <td>xyz12@gmail.com</td>
-                                  <td>945739575</td>
-                                  <td>xxx</td>
-                                  <td>
-                                      <button type="button" class="btn btn-sm btn-outline-danger"><i
-                                              class="fas fa-trash-alt"></i></button>
-                                      <button type="button" class="btn btn-sm btn-outline-success"><a href="edituser.html"><i
-                                                  class="fas fa-pencil-alt"></i></a></button>
-                                  </td>
-                              </tr>
+                                <td >
+                                    <div class="row name justify-content-start">
+                                        <div class="col-md-2 center" style="margin-left: 20px;">
+                                            <img id="user-image" th:src="@{/Assets/profile.svg}" alt="">
+                                        </div>
+                                        <div class="col center" >
+                                            <p style="margin: 0px;" >First Name Last Name<br><small>Student</small></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>67890</td>
+                                <td>66666666666</td>
+                                <td>Electrical</td>
+                                <td>Student</td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-success"><i
+                                      class="fas fa-pencil-alt"></i></a></button>
+                                      <button type="button" class="btn btn-sm btn-outline-danger"><a href="edituser.html"><i
+                                          class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
                           </tbody>
                       </table>
                   </div>
-    </div>
+        </div>
     </div>
 </div>
 </div>
