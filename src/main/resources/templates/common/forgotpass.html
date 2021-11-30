@@ -9,6 +9,8 @@
 
  <!-- link css -->
 <link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="stylesheet" th:href="@{/css/index.css}">
+
 <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css}">
 
 <!-- Google fonts -->
@@ -42,12 +44,11 @@
 </style>
 </head>
 <body>
-
+  <header th:insert="header.html :: nav"></header>
 	<main class="form">
         <form>
          
           <div class="container jumbotron text-center">
-            <img th:src="@{/images/logo.png}" alt="BITW Logo" class="mb-3" style="width: 30%; height: auto;" />
             <h3 class="mb-0"><strong>FORGOT PASSWORD</strong></h3><br>
           </div>
           
@@ -60,7 +61,7 @@
           </div>
           
         </form>
-      </main>
-
+   </main>
+<div id="footer" th:insert="footer.html :: footer"></div>
 </body>
 </html>
