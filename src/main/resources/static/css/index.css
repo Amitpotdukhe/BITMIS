@@ -105,15 +105,15 @@ position: absolute;
 
 #footer{
 
-  bottom: 0%;
-  position: absolute;
+  /* bottom: 0%; */
+  /* position: absolute; */
   width: 100%;
 
 }
 
-main{
+/* main{
   position: absolute;
-}
+} */
 
 
 
@@ -689,4 +689,11 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
 }
 .profile-icon{
 	height:20px
+}
+
+
+.editUser-container{
+
+  margin-top: 45%;
+
 }
