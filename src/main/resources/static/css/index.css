@@ -88,6 +88,13 @@ body{
 
 }
 
+header{
+
+background-color:rgb(0, 64, 128) ;
+
+
+}
+
 
         /* Logo Section */
 
@@ -200,7 +207,7 @@ align-items: center;
 
 .profile-part > * {
 
-    margin-right: 10px;
+    margin:0px  10px;
     overflow: visible;
 
 }
@@ -225,7 +232,7 @@ align-items: center;
     letter-spacing: 0.01em;
     text-transform: uppercase;
     
-    color: #025E7F;
+    color: var(--white);
 
 }
 
@@ -235,23 +242,28 @@ align-items: center;
     font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
+    
+    margin-top: -5px;
 
     text-transform: capitalize ;
     
-    color: #068DBF;
+    color: var(--white);
 
 }
 
 
-.user-image{
+#user-image{
 
-    border: 2px solid black !important;
-    border-radius: 100%;
 
-    transform: scale(1.2);
+    transform: scale(1.7);
 
     overflow: hidden;
 
+}
+
+
+#down-arrow{
+  margin-left: 10px;
 }
 
        /* profile part */
@@ -353,6 +365,8 @@ align-items: center;
    font-size: 0.9rem;
 
 }
+
+
           /* Logo section */
 
          /* Profile Strip */
@@ -424,6 +438,7 @@ font-size: 0.7rem;
 	background-color:#3949AB;
 	min-height:10px
 }
+
 
 
 
@@ -610,7 +625,6 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
 
 /* profile dropdown */
 .dropbtn {
-  background-color: #04AA6D;
   color: black;
   padding: 16px;
   font-size: 16px;
@@ -625,6 +639,8 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+
+  margin: 24px 0 0 10px;
   display: none;
   position: absolute;
   background-color: #F5F5F5;
@@ -645,11 +661,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: black;}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 .drop-link{
 	color:black !important
 }
