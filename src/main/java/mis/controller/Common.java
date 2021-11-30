@@ -44,7 +44,6 @@ public class Common {
 		return "admin/adminHome";
 	}
 	
-
 	@RequestMapping("addleavebalance")
 	public String addleavebalance() {
 		return "admin/addleavebalance";

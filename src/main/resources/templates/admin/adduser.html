@@ -200,10 +200,10 @@
             <label for="">Caste*</label>
             <input type="text" class="form-control" placeholder="Caste" required>
           </div>
-
-          <div class="form-group col-md-4">
-            <label for="blood-group">blood-group*</label>
-            <select name="blood-group" class="form-control" required>
+  
+              <div class="form-group col-md-4">
+                <label for="blood-group">blood-group*</label>
+             <select name="blood-group" class="form-control" required>
               <option value="blood-group">blood-group</option>
               <option>A Positive</option>
               <option>A Negative</option>
@@ -214,17 +214,19 @@
               <option>O Positive</option>
               <option>O Negative</option>
             </select>
+
           </div>
         </div>
-
-        <!-- ============   ADD BUTTON  ============= -->
-
-        <button type="submit" class="btn btn-outline-primary float-right">Add User</button>
-
-      </form>
-    </div>
+          
+            <!-- ============   ADD BUTTON  ============= -->
+  
+          <button type="submit" class="btn btn-outline-primary float-right">Add User</button>
+  
+        </form>
+      </div>
   </div>
-  <div id="footer" th:insert="footer.html :: footer"></div>
+    <div id="footer" th:insert="footer.html :: footer"></div>
+
 </body>
 
 </html>
