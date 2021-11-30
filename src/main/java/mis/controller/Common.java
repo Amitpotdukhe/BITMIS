@@ -44,7 +44,7 @@ public class Common {
 		return "admin/adminHome";
 	}
 	
-<<<<<<< HEAD
+
 	@RequestMapping("addleavebalance")
 	public String addleavebalance() {
 		return "admin/addleavebalance";
@@ -68,11 +68,12 @@ public class Common {
 	@RequestMapping("manageuser")
 	public String manageuser() {
 		return "admin/manageuser";
-=======
+	}
+
 	@RequestMapping("profile")
 	public String profile() {
 		return "common/profile";
->>>>>>> 7bdcb13634911ce0a455f2de9bf035a344626a3d
+
 	}
 
 }
