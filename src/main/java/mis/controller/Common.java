@@ -44,6 +44,10 @@ public class Common {
 		return "admin/adminHome";
 	}
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> cfa28ea92a6df96031c67fc604d3714d2d8b7581
 	@RequestMapping("addleavebalance")
 	public String addleavebalance() {
 		return "admin/addleavebalance";
@@ -68,6 +72,10 @@ public class Common {
 	public String manageuser() {
 		return "admin/manageuser";
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cfa28ea92a6df96031c67fc604d3714d2d8b7581
 	@RequestMapping("profile")
 	public String profile() {
 		return "common/profile";

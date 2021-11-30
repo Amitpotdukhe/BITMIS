@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/css/index.css}">
+
     <link rel="stylesheet" th:href="@{/css/header.css}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +56,6 @@
 </style>
 </head>
 <body>
-<header th:insert="header.html :: nav"></header>
-
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         
@@ -102,9 +100,6 @@
         
     </div>
 </div>
-
-
-<div th:insert="footer.html :: footer"></div>
 
 </body>
 </html>

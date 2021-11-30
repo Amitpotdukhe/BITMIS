@@ -2,6 +2,8 @@ const navToggler = document.querySelector('.nav-toggler');
 const navMenu = document.querySelector('.site-navbar ul');
 const navLinks = document.querySelectorAll('.site-navbar a');
 
+console.log("hi")
+
 // load all event listners
 allEventListners();
 
@@ -25,3 +27,5 @@ function navLinkClick() {
     navToggler.click();
   }
 }
+
+
