@@ -41,6 +41,11 @@ public class AdminController {
 		return "admin/leavehistory";
 	}
 	
+	@RequestMapping("addleavebalance")
+	public String addleavebalance() {
+		return "admin/addleavebalance";
+	}
+	
 	
 	@RequestMapping(value = "do_register", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("user") User user) {

@@ -42,7 +42,6 @@ public class Common {
 	@RequestMapping("profile")
 	public String profile() {
 		return "common/profile";
-
 	}
 
 }
