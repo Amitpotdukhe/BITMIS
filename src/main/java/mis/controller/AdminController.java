@@ -41,10 +41,6 @@ public class AdminController {
 		return "admin/leavehistory";
 	}
 	
-	@RequestMapping("manageuser")
-	public String manageUser() {
-		return "admin/manageuser";
-	}
 	
 	@RequestMapping(value = "do_register", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("user") User user) {
