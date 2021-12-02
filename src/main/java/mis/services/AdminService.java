@@ -34,4 +34,9 @@ public class AdminService {
 		return userRepo.getUserByKeyword(keyword);
 	}
 
+	public User findUserById(int id) {
+		// TODO Auto-generated method stub
+		return userRepo.getById(id);
+	}
+
 }

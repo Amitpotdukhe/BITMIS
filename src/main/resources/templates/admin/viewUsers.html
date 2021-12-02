@@ -145,10 +145,27 @@
 						<td th:text="${user.mobileNumber}">Mobile Number</td>
 						<td th:text="${user.address}">Address</td>
 						<td>
-							<button type="button" class="btn btn-sm btn-outline-success"><a th:href="@{edituser}"><i
+							<button type="button" class="btn btn-sm btn-outline-success"><a th:href = "@{/admin/edituser/{id}(id=${user.id})}"><i
 										class="fas fa-pencil-alt"></i></a></button>
 							<button type="button" class="btn btn-sm btn-outline-danger"><i
 									class="fas fa-trash-alt"></i></button>
+						</td>
+						<td>
+							<div class="btn-group " role="group" aria-label="Basic mixed styles example">
+							  <button type="button" class="btn btn-success fas fa-pencil-alt"></button>
+							  <button type="button" class="btn btn-warning bi bi-list">
+							  	<div class="dropdown">
+								  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+								    Dropdown button
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+								    <li><a class="dropdown-item" href="#">Action</a></li>
+								    <li><a class="dropdown-item" href="#">Another action</a></li>
+								    <li><a class="dropdown-item" href="#">Something else here</a></li>
+								  </ul>
+								</div>
+							  </button>
+							</div>
 						</td>
 					</tr>
 				</tbody>

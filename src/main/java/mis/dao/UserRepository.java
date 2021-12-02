@@ -10,10 +10,11 @@ import org.springframework.stereotype.Repository;
 import mis.entity.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, Integer> {
 	@Query("select u from User u where u.email = :email")
 	public User getUserByUserName(@Param("email") String email);
 	
 	@Query("select u from User u where u.name = :keyword")
 	public List<User> getUserByKeyword(@Param("keyword") String keyword);
+	
 }
