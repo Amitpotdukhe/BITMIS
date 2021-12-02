@@ -55,11 +55,14 @@ public class AdminController {
 	}
 	
 	@RequestMapping("view-users")
-	public String viewUsers(Model model) {
-		List<User> allUsers = adminService.viewAll();
-		model.addAttribute("allUsers",allUsers);
+	public String viewUsers(Model model, String keyword) {
+		if(keyword==null) {
+			List<User> allUsers = adminService.viewAll();
+			model.addAttribute("allUsers",allUsers);
+		} else {
+			model.addAttribute("allUSers", adminService.getUserByKeyword(keyword));
+		}
 		return "admin/viewUsers";
-
 	}
-	
+
 }

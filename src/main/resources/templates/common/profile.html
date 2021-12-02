@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
 
@@ -69,9 +69,11 @@
             <div class="col-md-12 mt-4" style="margin-bottom: -3%;"><h3>User Profile</h3></div>
             <div class="p-3 py-5">
                 
-                <div class="row">
-                    <div class="col-md-6"><label class="labels">Full Name</label><label  class="form-control">XYZ</label></div>
-                    <div class="col-md-6"><label class="labels">Email-id</label><label class="form-control" >XYZ@gmail.com</label></div>              
+
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Full Name</label><label  class="form-control" th:text="@{user.name}">XYZ</label></div>
+                    <div class="col-md-6"><label class="labels">Email-id</label><label class="form-control" th:text="@{user.email}">XYZ@gmail.com</label></div>              
+
                 
                     <div class="col-md-6"><label class="labels">Password</label><label class="form-control">*****</label></div>
                     <div class="col-md-6"><label class="labels">DOB</label><label class="form-control">11-nov-21</label></div>

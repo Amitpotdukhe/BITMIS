@@ -31,26 +31,23 @@ body{
             <div class="logo-section ">
         
               <a href="#home">
-
-
                 <div class="clg-logo ">
-        
                     <img id="clg-logo-png" class="mr-3" th:src="@{/Assets/clg-logo.png}" alt="">
                     <img th:src="@{/Assets/logo-name-white.svg}" alt="">
-        
                 </div>
-
               </a>
 
 
 
             <!-- USER_INFO  -->
-                
-            <div class="profile-part ">
+             <ul>
+             	<li><a sec:authorize="!isAuthenticated()" th:href="@{/signin}">Login</a></li>
+             </ul>
+            <div class="profile-part" >
         
                 <div class="user-info ">
         
-                        <span id="user-department">
+                        <span id="user-department" th:text="@{user.name}">
                                 Department
                         </span>
         
@@ -84,6 +81,7 @@ body{
         
         <!-- LOGO SECTION  -->
         
+        <script type="text/javascript" th:src="@{/js/header.js}"></script>
         
         </section>
 

@@ -29,4 +29,9 @@ public class AdminService {
 		
 	}
 
+	public Object getUserByKeyword(String keyword) {
+		// TODO Auto-generated method stub
+		return userRepo.getUserByKeyword(keyword);
+	}
+
 }
