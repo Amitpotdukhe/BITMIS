@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" >
 
 <head>
 	<meta charset="UTF-8">
@@ -88,18 +88,21 @@
 	<header th:insert="header.html :: nav"></header>
 	<div>
 	<!---Search bar-->
-    <div class="boxContainer" style="margin-top: 7%;">
-        <table class="elementsContainer">
-            <tr>
-                <td>
-                    <input type="text" placeholder="Search Email/Username" class="search">
-                </td>
-                <td>
-                    <a href="#"><i class="material-icons">search</i></a>
-                </td>
-            </tr>
-        </table>
-    </div>
+     <div class="boxContainer"  style="margin-top: 7%;">
+     	<form th:action="@{/admin/view-users}" method="get">
+	        <table class="elementsContainer">
+	            <tr>
+	                <td>
+	                    <input type="text" name="keyword" id="keyword" placeholder="Search Email/Username" class="search">
+	                </td>
+	                <td>
+	                    <button  type="submit"><i class="material-icons">search</i></button>
+	                </td>
+	            </tr>
+	        </table>
+        </form>
+    </div> 
+    
 
 	<div class="container mt-5">
 		<div>
@@ -175,6 +178,7 @@
 	</div>
 	</div>
 	<div id="footer" th:insert="footer.html :: footer"></div>
+	<script th:src="@{/js/script.js}"></script>
 </body>
 
 </html>

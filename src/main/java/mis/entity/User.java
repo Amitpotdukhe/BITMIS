@@ -3,6 +3,8 @@ package mis.entity;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "user")
 public class User {
@@ -27,6 +29,9 @@ public class User {
 	private String panNumber;
 	private String deptId;
 	private String doj;
+	
+//	@JsonIgnore
+//	private User user;
 	
 	public User() {
 		super();
