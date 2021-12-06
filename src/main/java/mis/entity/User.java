@@ -25,10 +25,18 @@ public class User {
 	private String gender;
 	private String address;
 	private String mobileNumber;
+	private String alternateMobile;
 	private String aadharNumber;
 	private String panNumber;
 	private String deptId;
 	private String doj;
+	private String nationality;
+	private String religion;
+	private String category;
+	private String caste;
+	private String blooGroup;
+
+
 	
 //	@JsonIgnore
 //	private User user;
@@ -158,13 +166,65 @@ public class User {
 		this.doj = doj;
 	}
 
+	public String getAlternateMobile() {
+		return alternateMobile;
+	}
+
+	public void setAlternateMobile(String alternateMobile) {
+		this.alternateMobile = alternateMobile;
+	}
+
+	public String getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
+	}
+
+	public String getReligion() {
+		return religion;
+	}
+
+	public void setReligion(String religion) {
+		this.religion = religion;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getBlooGroup() {
+		return blooGroup;
+	}
+
+	public void setBlooGroup(String blooGroup) {
+		this.blooGroup = blooGroup;
+	}
+
+	public String getCaste() {
+		return caste;
+	}
+
+	public void setCaste(String caste) {
+		this.caste = caste;
+	}
+	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", role=" + role
 				+ ", enabled=" + enabled + ", imageUrl=" + imageUrl + ", dob=" + dob + ", gender=" + gender
-				+ ", address=" + address + ", mobileNumber=" + mobileNumber + ", aadharNumber=" + aadharNumber
-				+ ", panNumber=" + panNumber + ", deptId=" + deptId + ", doj=" + doj + "]";
+				+ ", address=" + address + ", mobileNumber=" + mobileNumber + ", alternateMobile=" + alternateMobile
+				+ ", aadharNumber=" + aadharNumber + ", panNumber=" + panNumber + ", deptId=" + deptId + ", doj=" + doj
+				+ ", nationality=" + nationality + ", religion=" + religion + ", category=" + category + ", caste="
+				+ caste + ", blooGroup=" + blooGroup + "]";
 	}
+
+	
 
 
     
