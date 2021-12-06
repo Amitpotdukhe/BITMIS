@@ -4,6 +4,7 @@ package mis.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -57,14 +58,23 @@ public class AdminController {
 	}
 	
 	@RequestMapping("view-users")
-	public String viewUsers(Model model, String keyword) {
-		if(keyword==null) {
+	public String viewUsers(@Param("keyword") String keyword, Model model) {
+		if(keyword!=null) {
+			model.addAttribute("allUsers", adminService.getUser(keyword));
+		} else {
 			List<User> allUsers = adminService.viewAll();
 			model.addAttribute("allUsers",allUsers);
-		} else {
-			model.addAttribute("allUSers", adminService.getUserByKeyword(keyword));
 		}
 		return "admin/viewUsers";
 	}
+	
+//	@RequestMapping("view-users")
+//	public String viewUsers(Model model) {
+//		
+//		List<User> allUsers = adminService.viewAll();
+//		model.addAttribute("allUsers",allUsers);
+//		
+//		return "admin/viewUsers";
+//	}
 
 }

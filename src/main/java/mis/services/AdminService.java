@@ -29,14 +29,14 @@ public class AdminService {
 		
 	}
 
-	public Object getUserByKeyword(String keyword) {
-		// TODO Auto-generated method stub
-		return userRepo.getUserByKeyword(keyword);
-	}
-
 	public User findUserById(int id) {
 		// TODO Auto-generated method stub
 		return userRepo.getById(id);
+	}
+
+	public List<User> getUser(String keyword) {
+		// TODO Auto-generated method stub
+		return userRepo.getUserByKeyword(keyword);
 	}
 
 }
