@@ -53,7 +53,11 @@ public class AdminController {
 	@RequestMapping(value = "do_register", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("user") User user) {
 		System.out.println(user);
+		if(user.getImageUrl()==null) {
+			user.setImageUrl("default");
+		}
 		adminService.addUser(user);
+		
 		return "redirect:/admin/adduser";
 	}
 	

@@ -21,6 +21,7 @@ public class AdminService {
 	public void addUser(User user) {
 		// TODO Auto-generated method stub
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
+		
 		userRepo.save(user);
 	}
 

@@ -99,24 +99,19 @@
 	<main style="margin-top: 7%;">
 		<div class="container">
 		<div class="mt-10">
-		
-		
-		<!---Search bar-->
-		 
-			 <form th:action="@{/admin/view-users}" method="get">
+		<div class="container mt-5">
+		<div>
+			<form th:action="@{/admin/view-users}" method="get">
 				<div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
-            <div class="input-group">
-              <input type="search" name="keyword" id="keyword" placeholder="Search Email/Username" aria-describedby="button-addon1" class="form-control border-0 bg-light">
-              <div class="input-group-append">
-                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
-              </div>
-              </div>
+		           <div class="input-group">
+		             <input type="search" name="keyword" id="keyword" placeholder="Search Email/Username" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+		             <div class="input-group-append">
+		               <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+		             </div>
+		         </div>
               </div>
 			</form>
 		</div> 
-		</div>
-	
-		<div class="container mt-5">
 			<div>
 				<a th:href="@{adduser}" class="btn btn-sm btn-primary">Add Student</a>
 			</div>
