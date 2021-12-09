@@ -55,7 +55,7 @@
     
           <div class="form-group col-md-6">
             <label for="DOB">Date Of Birth*</label>
-            <input type="date"class="form-control" id="inputTextl4" placeholder="dd/mm/yyyy" required>
+            <input type="date"class="form-control" id="inputTextl4" placeholder="dd/mm/yyyy" th:value="${user.dob}" required>
           </div>
         </div>
     
@@ -64,17 +64,12 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Email*</label>
-                <input type="email" class="form-control" id="inputEmail4" required>
-              </div>
-    
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Password*</label>
-                <input type="password" class="form-control" id="inputPassword4" required>
+                <input type="email" class="form-control" id="inputEmail4" th:value="${user.email}" required>
               </div>
     
               <div class="form-group col-md-6">
                 <label for="inputGender4">Gender*</label>
-                <select name="gener" class="form-control" required>
+                <select name="gener" class="form-control" th:value="${user.gender}" required>
                   <option value="gener">...</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
@@ -84,7 +79,7 @@
     
               <div class="form-group col-md-6">
                 <label for="UserID">UserID*</label>
-                <input type="text" class="form-control" id="inputTextl4" required>
+                <input type="text" class="form-control" id="inputTextl4" th:value="${user.id}" required>
               </div>
         
             </div>
@@ -93,17 +88,17 @@
     
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="UserType">UserType*</label>
-                <select name="designation" class="form-control" required>
+                <label for="UserType">User Type*</label>
+                <select name="designation" class="form-control" th:value="${user.role}" required>
                   <option value="Type">Select Type</option>
-                  <option value="Student">Student</option>
-                  <option value="Faculty">Faculty</option>
+                  <option value="ADMIN">Admin</option>
+              	  <option value="STAFF">Staff</option>
                 </select>
               </div>
     
               <div class="form-group col-md-6">
                 <label for="inputAddress">Address*</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Address here ..." required>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Address here ..." th:value="${user.address}" required>
              </div>
             </div>
     
@@ -112,16 +107,16 @@
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="inputNum">Mobile number*</label>
-                <input type="tel" class="form-control" id="inputNum" required>
+                <input type="tel" class="form-control" id="inputNum" th:value="${user.mobileNumber}" required>
             
               </div>
               <div class="form-group col-md-4">
                 <label for="inputAdhar">Aadhar-Card Number*</label>
-                <input type="text" class="form-control" id="inputAdhar" required>
+                <input type="text" class="form-control" id="inputAdhar" th:value="${user.aadharNumber}" required>
               </div>
               <div class="form-group col-md-4">
                 <label for="inputPan">Pan Number*</label>
-                <input type="text" class="form-control" id="inputPan" required>
+                <input type="text" class="form-control" id="inputPan" th:value="${user.panNumber}" required>
               </div>
             </div>
     
@@ -129,17 +124,23 @@
     
             <div class="form-row">
               <div class="form-group col-md-4">
-                <label>Department ID*</label>
-                <input type="text" class="form-control" id="inputNum" required>
+              <label>Department Name*</label>
+            <select name="deptId" class="form-control" th:value="${user.deptId}" required>
+              <option th:value="">....</option>
+              <option value="1">Computer Engineering</option>
+              <option value="2">Civil Engineering</option>
+              <option value="3">Electrical Engineering</option>
+			  <option value="4">Mechanical Engineering</option>
+            </select>
             
               </div>
               <div class="form-group col-md-4">
                 <label for="inputAdhar">Date Of Joining*</label>
-                <input type="date" class="form-control" id="DOJ" required>
+                <input type="date" class="form-control" id="DOJ" th:value="${user.doj}" required>
               </div>
               <div class="form-group col-md-4">
                 <label for="inputPan">Designation*</label>
-                <select name="designation" class="form-control" required>
+                <select name="designation" class="form-control" id="" th:value="${user.email}" required>
                   <option value="Student">Student</option>
                   <option value="Staff">Staff</option>
                   <option value="HOD">H.O.D.</option>
@@ -153,17 +154,17 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label>Nationality*</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" th:value="${user.nationality}" required>
                </div>
     
               <div class="form-group col-md-6">
                 <label for="">Religion*</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" th:value="${user.religion}" required>
                 </div>
     
                 <div class="form-group col-md-6">
                   <label for="inputCategory">Category*</label>
-               <select name="Category" class="form-control" required>
+               <select name="Category" class="form-control" th:value="${user.category}" required>
                 <option value="GENERAL">Select Category</option>
                 <option value="SC">SC</option>
                 <option value="ST">ST</option>
@@ -176,12 +177,12 @@
     
               <div class="form-group col-md-6">
                 <label for="">Caste*</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" th:value="${user.caste}" required>
                 </div>
     
                 <div class="form-group col-md-4">
                   <label for="blood-group">blood-group*</label>
-               <select name="blood-group" class="form-control" required>
+               <select name="blood-group" class="form-control" th:value="${user.blooGroup}" required>
                 <option value="blood-group">blood-group</option>
                 <option>A Positive</option>
                 <option>A Negative</option>
