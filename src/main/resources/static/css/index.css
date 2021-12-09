@@ -5,6 +5,16 @@
     margin: 0%;
     box-sizing: border-box;
 }
+html,
+body {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  height: 100%;
+  width: 100%; 
+  background: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
 /*scrollbar css */
 ::-webkit-scrollbar {
   width: 10px;
@@ -94,7 +104,7 @@ position: absolute;
 
 #footer{
 
-  bottom: 0%;
+  bottom: 0% !important;
   position: absolute;
   width: 100%;
 
@@ -513,7 +523,7 @@ font-size: 0.7rem;
   font-size:15px;
   line-height:24px;
   color:#737373;
-  bottom:0px;
+  bottom:0px !important;
 }
 .site-footer hr
 {
@@ -771,3 +781,4 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
 	background:#009688 !important;
 	color:white!important;
 }
+
