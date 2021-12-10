@@ -791,16 +791,17 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
 	color:white!important;
 }
 
-<<<<<<< HEAD
 .edit-btn {
 
   padding: 5px 8px;
   border-radius: 4px !important;
+  height: 100%;
+  margin-right: 2px;
 
 }
 
-.table {
+.table-responsive {
   overflow: visible !important;
 }
-=======
->>>>>>> fdd6efeea1cb9697bf2a5b1a06ceb41c764ba77b
+
+.dropdown-toggle:after { content: none !important }
