@@ -16,21 +16,25 @@
 </head>
 <body>
 	<header th:insert="header.html :: nav"></header>
-	  <div style="margin-top:10rem">
-		<div class="container" sec:authorize="hasAuthority('ADMIN')">
-		<h2>Admin section</h2>
-			<a th:href="@{/admin/adduser}">add user</a>
-			<a th:href="@{/admin/view-users}">view All users</a>
-			<a th:href="@{/admin/managerole}">manage role</a>
+
+	<main style="margin-top: 7%;">
+		<div >
+		  <div class="container" sec:authorize="hasAuthority('ADMIN')">
+		  <h2>Admin section</h2>
+			  <a th:href="@{/admin/adduser}">add user</a>
+			  <a th:href="@{/admin/view-users}">view All users</a>
+			  <a th:href="@{/admin/managerole}">manage role</a>
+		  </div>
+		  
+		  <div class="container" sec:authorize="hasAuthority('STAFF')">
+		  <h2>staff section</h2>
+			  <a th:href="@{/staff/apply-for-leave}">Apply for leave</a>
+			  <a th:href="@{/admin/view-users}">view All users</a>
+			  <a th:href="@{/admin/managerole}">manage role</a>
+		  </div>
 		</div>
-		
-		<div class="container" sec:authorize="hasAuthority('STAFF')">
-		<h2>staff section</h2>
-			<a th:href="@{/staff/apply-for-leave}">Apply for leave</a>
-			<a th:href="@{/admin/view-users}">view All users</a>
-			<a th:href="@{/admin/managerole}">manage role</a>
-		</div>
-	  </div>
+	</main>
+
 	<div th:insert="footer.html :: footer"></div>
 </body>
 </html>
