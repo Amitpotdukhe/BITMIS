@@ -63,6 +63,15 @@
     cursor: pointer;
 }
 
+.small-icon {
+
+  display: inline;
+  height: 18px;
+  width: 18px;
+
+  cursor: pointer;
+}
+
 .icon-white{
 
     display: inline;
@@ -770,4 +779,15 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
 .active{
 	background:#009688 !important;
 	color:white!important;
+}
+
+.edit-btn {
+
+  padding: 5px 8px;
+  border-radius: 4px !important;
+
+}
+
+.table {
+  overflow: visible !important;
 }
