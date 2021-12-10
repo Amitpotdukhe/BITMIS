@@ -55,6 +55,43 @@
     cursor: pointer;
     border: solid 1px #BA68C8
 }
+
+/* ************** profile picture styling  **************** */
+
+.profile-pic {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-pic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 1.5em;
+    padding-bottom: 4.5em;
+}
+
+form input[type="file"] {
+          display: none;
+          cursor: pointer;
+ }
+ 
 </style>
 </head>
 <body>
@@ -63,17 +100,20 @@
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-            <img class="rounded-circle mt-5" width="150px" th:src="@{user.imageUrl}">
-            <span class="font-weight-bold">Edogaru</span>
-            <span class="text-black-50">edogaru@mail.com.my</span><span>
-             </span></div>
-             <div class="mb-3">
-              <form method="post" th:action="@{/profileUpload}" enctype="multipart/form-data">
-				  <label for="formFileSm" class="form-label">Change Profile Picture</label>
-				  <input class="form-control form-control-sm" id="formFileSm" type="file" name="file">
-				  <button type="submit" class="btn btn-primary mt-2" >Upload File</button>
-			  </form>
-			</div>
+                  <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><form th:action="@{/profileUpload}" method="post" enctype="multipart/form-data">
+                <label for="fileToUpload">
+              <div class="profile-pic" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUkIq9DjIgYbGgIenjkjA-tkr3mN1_bBnsEw&usqp=CAU')">
+                  <span class="glyphicon glyphicon-camera"></span>
+                  <span>Change Image</span>
+              </div>
+              </label>
+              <input type="File" name="fileToUpload" id="fileToUpload"> <br>
+              <span class="font-weight-bold">Edogaru</span> <br> 
+              <span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+            </form>
+        </div></div>
+             
         </div>
         <div class="col-md-9 border-right">
             <div class="col-md-12 mt-4" style="margin-bottom: -3%;"><h3>User Profile</h3></div>
@@ -84,18 +124,14 @@
                     <div class="col-md-6"><label class="labels">Full Name</label><label  class="form-control" th:text="@{user.name}">XYZ</label></div>
                     <div class="col-md-6"><label class="labels">Email-id</label><label class="form-control" th:text="@{user.email}">XYZ@gmail.com</label></div>              
 
-                
-                    <div class="col-md-6"><label class="labels">Password</label><label class="form-control">*****</label></div>
+
                     <div class="col-md-6"><label class="labels">DOB</label><label class="form-control">11-nov-21</label></div>
                     <div class="col-md-4"><label class="labels">Gender</label><label class="form-control">Female</label></div>
                 
-                    <div class="col-md-4"><label class="labels">UserID</label><label class="form-control">100</label></div>
-                    <div class="col-md-4"><label class="labels">UserType</label><label class="form-control">Student</label></div>
+                    <div class="col-md-6"><label class="labels">UserID</label><label class="form-control">100</label></div>
+                    <div class="col-md-6"><label class="labels">UserType</label><label class="form-control">Student</label></div>
               
                     <div class="col-md-12"><label class="labels">Address</label><label class="form-control">abc colony</label></div>
-                    <div class="col-md-4"><label class="labels">City</label><label class="form-control">Wardha</label></div>
-                    <div class="col-md-4"><label class="labels">State</label><label class="form-control">Maharashtra</label></div>
-                    <div class="col-md-4"><label class="labels">Zip Code</label><label class="form-control">442001</div> <br>
                     <div class="col-md-6"><label class="labels">Mobile Number</label><label class="form-control">1234567890</label></div>
                     <div class="col-md-6"><label class="labels">Alternate Number</label><label type="text"  class="form-control">8888899999</label></div>
                     <div class="col-md-6"><label class="labels">Aadhar Card Number</label><label class="form-control">123456789123</label></div>
@@ -107,7 +143,7 @@
                     <div class="col-md-6"><label class="labels">Religion</label><label class="form-control">xxx</label></div>
                     <div class="col-md-6"><label class="labels">Category</label><label class="form-control">xxx</label></div>
                     <div class="col-md-6"><label class="labels">Caste</label><label class="form-control">xxx</label></div>
-                    <div class="col-md-12"><label class="labels">Blood Group</label><label class="form-control">B+</label></div>
+                    <div class="col-md-6"><label class="labels">Blood Group</label><label class="form-control">B+</label></div>
                 </div>
             
             </div>
