@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import mis.dao.UserRepository;
 import mis.entity.User;
 import mis.services.AdminService;
 
@@ -22,6 +23,9 @@ public class AdminController {
 	@Autowired
 	private AdminService adminService;
 	
+	@Autowired
+	private UserRepository userRepo;
+	
 	@RequestMapping("adduser")
 	public String adduser() {
 		
@@ -29,7 +33,11 @@ public class AdminController {
 	}
 	
 	@RequestMapping("managerole")
-	public String manageRole() {
+	public String manageRole(@Param("keyword") String keyword, Model model) {
+		if(keyword!=null) {
+			model.addAttribute("allUsers",adminService.getUser(keyword));
+		}
+		System.out.println(keyword);
 		return "admin/managerole";
 	}
 	
@@ -37,6 +45,12 @@ public class AdminController {
 	public String editUser(@PathVariable int id, Model model) {
 		model.addAttribute("user", adminService.findUserById(id));
 		return "admin/editUser";
+	}
+	
+	@RequestMapping("update/{id}")
+	public String updateUser(@PathVariable int id, @ModelAttribute("user") User user) {
+		userRepo.save(user);
+		return "redirect:/admin/view-users";
 	}
 	
 	@RequestMapping("leavehistory")
@@ -54,7 +68,7 @@ public class AdminController {
 	public String registerUser(@ModelAttribute("user") User user) {
 		System.out.println(user);
 		if(user.getImageUrl()==null) {
-			user.setImageUrl("default");
+			user.setImageUrl("/profileimages/default.jpg");
 		}
 		adminService.addUser(user);
 		
@@ -71,14 +85,5 @@ public class AdminController {
 		}
 		return "admin/viewUsers";
 	}
-	
-//	@RequestMapping("view-users")
-//	public String viewUsers(Model model) {
-//		
-//		List<User> allUsers = adminService.viewAll();
-//		model.addAttribute("allUsers",allUsers);
-//		
-//		return "admin/viewUsers";
-//	}
 
 }
