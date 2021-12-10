@@ -76,17 +76,32 @@
     <main class="managerole-main">
 
         <!---Search bar-->
-        <div class="search-container " >
+
+		<div>
+			<form th:action="@{/admin/managerole}" method="get">
+				<div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+		           <div class="input-group">
+		             <input type="search" name="keyword" id="keyword" placeholder="Search Email/Username" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+		             <div class="input-group-append">
+		               <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+		             </div>
+		         </div>
+              </div>
+			</form>
+		</div>
+
+        
+        <!-- <div class="search-container " >
              <form th:method="@{/admin/managerole}" method="get">
                         <input type="text" placeholder="Search Email/Username" name="keyword" class="search">
                         <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
              </form>
-        </div>
+        </div> -->
     
         <!--user information-->
-        <div class="container-fluid mt-5 font">
+        <div class="container-fluid mt-5  ">
             <div class="row">
-                <div class="col-md-12 userDetails font"><strong>Results: User Details</strong></div>
+                <div class="col-md-12 userDetails  "><strong>Results: User Details</strong></div>
             </div><br>
             <div class="row">
                 <div class="col-md-12">
@@ -103,25 +118,20 @@
                         <tbody>
                             <tr th:each="user : ${allUsers}">
                             <td th:text="${user.id}">12345</td>
-                                <td >
+                            <td >
                                     <div class="row name justify-content-start">
-                                        <div class="col-md-2 center" style="margin-left: 20px;">
+                                        <div class="col-md-2 center" >
                                             <img id="user-image" th:src="@{/Assets/profile.svg}" alt="">
                                         </div>
                                         <div class="col center" >
                                             <p style="margin: 0px;" th:text="${user.name}">First Name Last Name<br></p>
                                         </div>
                                     </div>
-                                </td>
+                            </td>
                                 
-                                <td th:text="${user.deptId}">99999999999</td>
-                                <td th:text="${user.email}">Faculty</td>
-                                <td th:text="${user.role}">Faculty</td>
-                                 
-                                
-                                
-                                
-                                
+                            <td th:text="${user.deptId}">99999999999</td>
+                            <td th:text="${user.email}">Faculty</td>
+                            <td th:text="${user.role}">Faculty</td>
                             </tr>
                         </tbody>
                     </table>

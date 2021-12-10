@@ -726,6 +726,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 70%;;
   transform: translate(-50% , -55%);
 }
 .search-container {
