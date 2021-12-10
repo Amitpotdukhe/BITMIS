@@ -38,38 +38,42 @@
 </head>
 
 <body>
+
   <header th:insert="header.html :: nav"></header>
+
+<main>
+  
   <div class="container-fluid" style="margin-top: 6%;margin-bottom: 2%;">
     <div id="form">
       <form th:action="@{/admin/do_register}" method="POST" th:object="${user}">
-
+  
         <!-- ============   Name + DOB  ============= -->
-
+  
         <div class="form-row">
           <div class="form-group col-md-6 ">
             <label for="firstName">Full Name*</label>
             <input type="text" class="form-control " id="inputTextl4" name="name" required>
           </div>
-
+  
           <div class="form-group col-md-6">
             <label for="DOB">Date Of Birth*</label>
             <input type="date" class="form-control" id="inputTextl4" placeholder="dd/mm/yyyy" name="dob" required>
           </div>
         </div>
-
+  
         <!-- ============   Email + Password + Gender + Address  ============= -->
-
+  
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email*</label>
             <input type="email" class="form-control" id="inputEmail4" name="email" required>
           </div>
-
+  
           <div class="form-group col-md-6">
             <label for="inputPassword4">Password*</label>
             <input type="password" class="form-control" name="password" id="inputPassword4" required>
           </div>
-
+  
           <div class="form-group col-md-6">
             <label for="inputGender4">Gender*</label>
             <select name="gender" class="form-control" required>
@@ -79,42 +83,42 @@
               <option value="O">Other</option>
             </select>
           </div>
-
+  
           <div class="form-group col-md-6">
             <label for="inputAddress">Address*</label>
             <input type="text" class="form-control" name="address" id="inputAddress" placeholder="Address here ..." required>
           </div>
-
+  
         </div>
-
+  
         <!-- ============   correspondence address + Mobile number ============= -->
-
+  
         <div class="form-row">
           <!--<div class="form-group col-md-6">
             <label for="inputAddress">correspondence address</label>
             <input type="text" class="form-control" id="inputAddress" placeholder="Address here ...">
           </div> -->
-
+  
           <div class="form-group col-md-6">
             <label for="inputNum">Mobile number*</label>
             <input type="tel" class="form-control" name="mobileNumber" id="inputNum" placeholder="Mobile number" required>
           </div>
-
+  
         </div>
-
+  
         <!-- Alternate-Mobile + Telephone number + Aadhar-Card Number + pan  + department + DOJ  -->
-
+  
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="inputNum">Alternate-Mobile number*</label>
             <input type="tel" class="form-control" id="inputNum" placeholder="Mobile number" name="alternateMobile" required>
           </div> 
-
+  
           <!--<div class="form-group col-md-4">
             <label for="inputNum">Telephone number*</label>
             <input type="tel" class="form-control" id="inputNum" placeholder="Mobile number" required>
           </div>-->
-
+  
           <div class="form-group col-md-4">
             <label for="inputAdhar">Aadhar-Card Number*</label>
             <input type="text" class="form-control" name="aadharNumber" id="inputAdhar" placeholder="Aadhar Number" required>
@@ -130,7 +134,7 @@
               <option value="1">Computer Engineering</option>
               <option value="2">Civil Engineering</option>
               <option value="3">Electrical Engineering</option>
-			  <option value="4">Mechanical Engineering</option>
+        <option value="4">Mechanical Engineering</option>
             </select>
           </div>
           <div class="form-group col-md-4">
@@ -138,11 +142,11 @@
             <input type="date" class="form-control" name="doj" id="DOJ" required>
           </div>
         </div>
-
+  
         <!-- ============   Department + Roll Number + Semester  ============= -->
-
+  
         <div class="form-row">
-
+  
           <div class="form-group col-md-4">
             <label for="designation">User Type*</label>
             <select name="role" class="form-control" id="designation" required>
@@ -152,12 +156,12 @@
               
             </select>
           </div>
-
+  
           <!-- <div class="form-group col-md-4">
             <label for="inputRoll">Roll Number*</label>
             <input type="text" class="form-control" id="inputRoll" name="rollNum" placeholder="Roll Number" required>
           </div>
-
+  
           <div class="form-group col-md-4">
             <label for="inputSem">Semester*</label>
             <select name="Semester" class="form-control" id="inputSem" required>
@@ -173,20 +177,20 @@
             </select>
           </div>
         </div> -->
-
-
+  
+  
         <!-- ============   Nationality + Religion + Category + Caste + blood-group============= -->
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Nationality*</label>
             <input type="text" class="form-control" name="nationality" placeholder="Nationality" required>
           </div>
-
+  
           <div class="form-group col-md-6">
             <label for="">Religion*</label>
             <input type="text" class="form-control" name="religion" placeholder="Religion" required>
           </div>
-
+  
           <div class="form-group col-md-6">
             <label for="inputCategory">Category*</label>
             <select name="category" class="form-control" required>
@@ -199,7 +203,7 @@
               <option value="OPEN">OPEN</option>
             </select>
           </div>
-
+  
           <div class="form-group col-md-6">
             <label for="">Caste*</label>
             <input type="text" class="form-control" name="caste" placeholder="Caste" required>
@@ -218,7 +222,7 @@
               <option>O Positive</option>
               <option>O Negative</option>
             </select>
-
+  
           </div>
         </div>
           
@@ -229,7 +233,11 @@
         </form>
       </div>
   </div>
-    <div id="scroll-footer" th:insert="footer.html :: footer"></div>
+  
+</main>
+
+
+<div id="scroll-footer" th:insert="footer.html :: footer"></div>
 
 </body>
 
