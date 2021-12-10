@@ -21,7 +21,7 @@ public class AdminService {
 	public void addUser(User user) {
 		// TODO Auto-generated method stub
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
-		
+		user.setEnabled(true);
 		userRepo.save(user);
 	}
 
@@ -38,6 +38,12 @@ public class AdminService {
 	public List<User> getUser(String keyword) {
 		// TODO Auto-generated method stub
 		return userRepo.getUserByKeyword(keyword);
+	}
+
+	public User getRoleMethod(String key) {
+		// TODO Auto-generated method stub
+		
+		return userRepo.getUserForRoleChange(key);
 	}
 
 }

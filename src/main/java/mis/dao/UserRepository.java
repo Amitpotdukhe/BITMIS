@@ -21,6 +21,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	@Query("select u from User u where u.name = :name")
 	public User getUserByName(@Param("name") String name);
 	
+	@Query(value="select * from User u where u.id like %:key% or u.email like %:key%", nativeQuery = true)
+	public User getUserForRoleChange(@Param("key") String key);
+	
 //	@Query(value = "select * from User u where u.name like %:keyword% or u.email like %:keyword%", nativeQuery = true)
 //	List<User> search(@Param("keyword") String keyword);
 	//search
