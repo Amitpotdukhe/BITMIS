@@ -49,12 +49,12 @@ public class Common {
 	
 	
 	
-	@RequestMapping("edituser")
-	public String edituser() {
-		return "admin/editUser";
-	}
+//	@RequestMapping("edituser")
+//	public String edituser() {
+//		return "admin/editUser";
+//	}
 	
-	@RequestMapping("resetpass")
+	@RequestMapping("resetpass")	
 	public String reset() {
 		return "common/resetpass";
 	}

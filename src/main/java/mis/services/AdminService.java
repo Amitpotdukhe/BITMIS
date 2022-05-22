@@ -42,7 +42,6 @@ public class AdminService {
 
 	public User getRoleMethod(String key) {
 		// TODO Auto-generated method stub
-		
 		return userRepo.getUserForRoleChange(key);
 	}
 
